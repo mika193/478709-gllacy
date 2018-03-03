@@ -42,13 +42,16 @@
         </ul>
         <ul class="user-navigation">
           <li class="header-search">
+            <a href="#"></a>
             <!--Здесь будет форма поиска-->
           </li>
           <li class="header-enter">
-            <p>вход</p>
+            <a href="#">вход</a>
             <!--Здесь будет форма входа-->
           </li>
-          <li class="header-cart">пусто</li>
+          <li class="header-cart">
+            <a href="#">пусто</a>
+          </li>
         </ul>
       </nav>
       <p class="work-schedule">с 10 до 20, ежедневно</p>
@@ -57,23 +60,23 @@
     <main class="content">
       <h1 class="visually-hidden">Глейси - магазин мороженого</h1>
       <section class="promo-actions">
-        <h2 class="visually-hidden">Два мороженных на выбор</h2>
-        <form id="ice-cream-choise">
-          <label for="ice-cream-1">крем-брюле и пломбир с малиновым джемом</label>
-          <label for="ice-cream-2">шоколадный пломбир и лимонный сорбет</label>
-          <label for="ice-cream-3">пломбир с помадкой и клубничный щербет</label>
-          <input id="ice-cream-1" type="radio">
-          <input id="ice-cream-2" type="radio">
-          <input id="ice-cream-3" type="radio">
-          <button form="ice-cream-choise" type="submit">давайте оба!</button>
-        </form>
-        <img class="ice-cream-image-1 tipe-1" src="#" alt="Крем-брюле">
-        <img class="ice-cream-image-2 tipe-1" src="#" alt="Пломбир с малиновым джемом">
-        <img class="ice-cream-image-1 tipe-2" src="#" alt="Шоколадный пломбир">
-        <img class="ice-cream-image-2 tipe-2" src="#" alt="Лимонный сорбет">
-        <img class="ice-cream-image-1 tipe-3" src="#" alt="Пломбир с помадкой">
-        <img class="ice-cream-image-2 tipe-3" src="#" alt="Клубничный щербет">
+        <h2>крем-брюле и пломбир с малиновым джемом</h2>
+        <img class="promo-image" src="#" alt="крем-брюле и пломбир с малиновым джемом">
+        <a class="button promo-button" href="#">давайте оба!</a>
       </section>
+      <section class="promo-actions">
+        <h2>шоколадный пломбир и лимонный сорбет</h2>
+        <img class="promo-image" src="#" alt="шоколадный пломбир и лимонный сорбет">
+        <a class="button promo-button" href="#">давайте оба!</a>
+      </section>
+      <section class="promo-actions">
+        <h2>пломбир с помадкой и клубничный щербет</h2>
+        <img class="promo-image" src="#" alt="пломбир с помадкой и клубничный щербет">
+        <a class="button promo-button" href="#">давайте оба!</a>
+      </section>
+      <span class="slider-button"></span>
+      <span class="slider-button"></span>
+      <span class="slider-button"></span>
       <section class="free-proposal">
         <h2 class="visually-hidden">Бесплатные предложения</h2>
         <ul class="free-proposal-list">
@@ -97,9 +100,9 @@
             <p class="item-price">
               <span>310 &#8381;</span>/кг
             </p>
-            <a href="#">
-              <h3 class="item-title">сливочное с апельсиновым джемом и цитрусовой стружкой</h3>
-            </a>
+            <p class="item-title">
+              <a href="#">сливочное с апельсиновым джемом и цитрусовой стружкой</a>
+            </p>
             <a class="item-button" href="#">Быстрый просмотр</a>
           </li>
           <li class="bestsellers-item">
@@ -107,9 +110,9 @@
             <p class="item-price">
               <span>380 &#8381;</span>/кг
             </p>
-            <a href="#">
-              <h3 class="item-title">сливочно-кофейное с кусочками шоколада</h3>
-            </a>
+            <p class="item-price">
+              <a href="#">сливочно-кофейное с кусочками шоколада</a>
+            </p>
             <a class="item-button" href="#">Быстрый просмотр</a>
           </li>
           <li class="bestsellers-item">
@@ -117,9 +120,9 @@
             <p class="item-prce">
               <span>355 &#8381;</span>/кг
             </p>
-            <a href="#">
-              <h3 class="item-title">сливочно-клубничное с присыпкой из белого шоколада</h3>
-            </a>
+            <p class="item-price">
+              <a href="#">сливочно-клубничное с присыпкой из белого шоколада</a>
+            </p>
             <a class="item-button" href="#">Быстрый просмотр</a>
           </li>
           <li class="bestsellers-item">
@@ -127,9 +130,9 @@
             <p class="item-prce">
               <span>415 &#8381;</span>/кг
             </p>
-            <a href="#">
-              <h3 class="item-title">сливочное крем-брюле с карамельной подливкой</h3>
-            </a>
+            <p class="item-price">
+              <a href="#">сливочное крем-брюле с карамельной подливкой</a>
+            </p>
             <a class="item-button" href="#">Быстрый просмотр</a>
           </li>
         </ul>
@@ -154,9 +157,7 @@
       </section>
       <article class="blog-news">
         <h2>Новое в нашем блоге</h2>
-        <a href="#">
-          <h3>10 способов сервировки фруктовых щербетов к столу</h3>
-        </a>
+        <a href="#">10 способов сервировки фруктовых щербетов к столу</a>
       </article>
       <section class="newsletter-subscription">
         <h2 class="visually-hidden">Подписка на рассылку</h2>
@@ -197,20 +198,20 @@
           <a href="#">Вконтакте</a>
         </li>
       </ul>
-      <div class="for-contractors">
-        <p>Для поставщиков</p>
-        <ul class="for-constractors-menu">
-          <li>
-            <a href="">О производстве</a>
-          </li>
-          <li>
-            <a href="">Наши документы</a>
-          </li>
-          <li>
-            <a href="">Экологические стандарты</a>
-          </li>
-        </ul>
-      </div>
+      <ul class="for-constractors-menu">
+        <li>
+          <a class="constractors" href="#">Для поставщиков</a>
+        </li>
+        <li>
+          <a href="#">О производстве</a>
+        </li>
+        <li>
+          <a href="#">Наши документы</a>
+        </li>
+        <li>
+          <a href="#">Экологические стандарты</a>
+        </li>
+      </ul>
       <div class="copyright">
         <a href="https://htmlacademy.ru/intensive/htmlcss">
           <img src="#" alt="Логотип HTML-Academy">
