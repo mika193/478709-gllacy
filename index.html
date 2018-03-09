@@ -42,7 +42,7 @@
         </ul>
         <ul class="user-navigation">
           <li class="header-search">
-            <a class="search-button text-hidden" href="#">Поиск</a>
+            <a class="search-button" href="#" aria-label="Поиск"></a>
             <form class="search-form" method="get" action="#">
               <label class="visually-hidden" for="main-search">Что ищем</label>
               <input id="main-search" name="search" type="search" placeholder="Что ищем?">
@@ -85,9 +85,9 @@
         <img class="promo-image" src="img/slider-ice-cream1.png" width="1079" height="854" alt="пломбир с помадкой и клубничный щербет">
         <a class="button promo-button" href="#">давайте оба!</a>
       </section>
-      <button class="slider-button text-hidden">Слайд 1</button>
-      <button class="slider-button text-hidden">Слайд 2</button>
-      <button class="slider-button text-hidden">Слайд 3</button>
+      <button class="slider-button" aria-label="Слайд 1"></button>
+      <button class="slider-button" aria-label="Слайд 2"></button>
+      <button class="slider-button" aria-label="Слайд 3"></button>
       <section class="free-proposal">
         <h2 class="visually-hidden">Бесплатные предложения</h2>
         <ul class="free-proposal-list">
@@ -199,18 +199,26 @@
       </section>
     </main>
     <footer class="main-footer">
-      <ul class="social">
+      <ul class="social" aria-label="Мы в социальных сетях">
         <li class="twitter">
-          <a class="text-hidden" href="#">Твиттер</a>
+          <a href="#">
+            <span class="visually-hidden">Твиттер</span>
+          </a>
         </li>
         <li class="instagramm">
-          <a class="text-hidden" href="#">Инстаграмм</a>
+          <a href="#">
+            <span class="visually-hidden">Инстаграмм</span>
+          </a>
         </li>
         <li class="facebook">
-          <a class="text-hidden" href="#">Фейсбук</a>
+          <a href="#">
+            <span class="visually-hidden">Фейсбук</span>
+          </a>
         </li>
         <li class="vk">
-          <a class="text-hidden" href="#">Вконтакте</a>
+          <a href="#">
+            <span class="visually-hidden">Вконтакте</span>
+          </a>
         </li>
       </ul>
       <ul class="for-constractors-menu">
@@ -241,7 +249,9 @@
     <section class="modal modal-feedback">
       <h2 class="visually-hidden">Форма обратной связи</h2>
       <p>Мы обязательно вам ответим!</p>
-      <button class="modal-close text-hidden">Закрыть форму</button>
+      <button class="modal-close">
+        <span class="visually-hidden">Закрыть форму</span>
+      </button>
       <form class="feedback-form" method="post" action="#">
         <label class="visually-hidden" for="feedback-name">Введите ваше имя</label>
         <input id="feedback-name" name="feedback-name" type="text" placeholder="Как вас зовут?">

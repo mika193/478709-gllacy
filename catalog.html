@@ -42,7 +42,7 @@
         </ul>
         <ul class="user-navigation">
           <li class="header-search">
-            <a class="search-button text-hidden" href="#">Поиск</a>
+            <a class="search-button" href="#" aria-label="Поиск">Поиск</a>
             <form class="search-form" method="get" action="#">
               <label class="visually-hidden" for="main-search">Что ищем</label>
               <input id="main-search" name="search" type="search" placeholder="Что ищем?">
@@ -70,7 +70,9 @@
         <table>
           <tr class="cart-item">
             <td class="delete-button">
-              <button class="cart-button text-hidden" type="button">Удалить товар из корзины</button>
+              <button class="cart-button" type="button">
+                <span class="visually-hidden">Удалить товар из корзины</span>
+              </button>
             </td>
             <td class="item-image">
               <img class="cart-item-image" src="img/small-ice-cream1.png" width="33" height="33" alt="Пломбир с апельсиновым джемом">
@@ -83,14 +85,15 @@
           </tr>
           <tr class="cart-item">
             <td class="delete-button">
-              <button class="cart-button text-hidden" type="button">Удалить товар из корзины</button>
+              <button class="cart-button" type="button">
+                <span class="visually-hidden">Удалить товар из корзины</span>
+              </button>
             </td>
             <td class="item-image">
                 <img class="cart-item-image" src="img/small-ice-cream2.png" width="33" height="33" alt="Клубничный пломбир с присыпкой
                 из белого шоколада">
             </td>
-            <td class="item-title">Клубничный пломбир с присыпкой
-                из белого шоколада</td>
+            <td class="item-title">Клубничный пломбир с присыпкой из белого шоколада</td>
             <td class="item-weight-price">
               <span>1,5 кг х</span> 300 руб
             </td>
@@ -116,7 +119,7 @@
         <li>Сливочное</li>
       </ul>
       <h1>Сливочное мороженое</h1>
-      <form class="filters" method="get" action="#" oninput="minprice.value=minpricerange.value; maxprice.value=maxpricerange.value">
+      <form class="filters" method="get" action="#">
         <h2 class="visually-hidden">Форма выбора товара</h2>
         <label for="sorting">Сортировка:</label>
         <select id="sorting" name="sorting">
@@ -128,15 +131,16 @@
         <fieldset class="price">
           <legend>Цена:</legend>
           <p class="price-value">
-            <output name="minprice"> </output>
-            <span> руб.&#8211;</span>
-            <output name="maxprice"> </output>
+            <label class="visually-hidden" for="min-price">Введите минимальное значение</label>
+            <input id="min-price" name="min-price" type="text" placeholder="100">
+            <span>руб. &#8211;</span>
+            <label class="visually-hidden" for="max-price">Введите максимальное значение</label>
+            <input id="max-price" name="max-price" type="text" placeholder="500">
             <span>руб.</span>
           </p>
-          <label class="visually-hidden" for="min-price-range">выберете минимальную цену</label>
-          <input class="visually-hidden" id="min-price-range" name="minpricerange" type="range" min="0" max="1000" step="100">
-          <label class="visually-hidden" for="max-price-range">выберете максимальную цену</label>
-          <input class="visually-hidden" id="max-price-range" name="maxpricerange" type="range" min="0" max="1000" step="100">
+          <div class="price-range">
+            <div class="fat-line"></div>
+          </div>
         </fieldset>
         <fieldset class="fat">
           <legend>Жирность:</legend>
@@ -313,7 +317,9 @@
       </section>
       <ul class="pagination" aria-label="преход на другую страницу">
         <li>
-          <a class="text-hidden" href="#">назад</a>
+          <a href="#">
+            <span class="visually-hidden">назад</span>
+          </a>
         </li>
         <li>
           <a href="#">1</a>
@@ -331,23 +337,33 @@
           <a href="#">5</a>
         </li>
         <li>
-          <a class="text-hidden" href="#">вперед</a>
+          <a href="#">
+            <span class="visually-hidden">вперед</span>
+          </a>
         </li>
       </ul>
     </main>
     <footer class="main-footer">
-        <ul class="social">
+        <ul class="social" aria-label="мы в социальных сетях">
           <li class="twitter">
-            <a class="text-hidden" href="#">Твиттер</a>
+            <a href="#">
+              <span class="visually-hidden">Твиттер</span>
+            </a>
           </li>
           <li class="instagramm">
-            <a class="text-hidden" href="#">Инстаграмм</a>
+            <a href="#">
+              <span class="visually-hidden">Инстаграмм</span>
+            </a>
           </li>
           <li class="facebook">
-            <a class="text-hidden" href="#">Фейсбук</a>
+            <a href="#">
+              <span class="visually-hidden">Фейсбук</span>
+            </a>
           </li>
           <li class="vk">
-            <a class="text-hidden" href="#">Вконтакте</a>
+            <a href="#">
+              <span class="visually-hidden">Вконтакте</span>
+            </a>
           </li>
         </ul>
         <ul class="for-constractors-menu">
