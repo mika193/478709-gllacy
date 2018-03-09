@@ -8,7 +8,7 @@
     <header class="main-header">
       <nav class="main-navigation">
         <a class="header-logo">
-          <img class="logo-image" src="img/logo.svg" width="154" height="64" alt="Глейси">
+          <img class="logo-image" src="img/logo.svg" width="154" height="64" alt="Интернет-магазин мороженного Глейси">
         </a>
         <ul class="site-navigation">
           <li>
@@ -42,20 +42,31 @@
         </ul>
         <ul class="user-navigation">
           <li class="header-search">
-            <a href="#"></a>
-            <!--Здесь будет форма поиска-->
+            <a class="search-button text-hidden" href="#">Поиск</a>
+            <form class="search-form" method="get" action="#">
+              <label class="visually-hidden" for="main-search">Что ищем</label>
+              <input id="main-search" name="search" type="search" placeholder="Что ищем?">
+            </form>
           </li>
           <li class="header-enter">
             <a href="#">вход</a>
-            <!--Здесь будет форма входа-->
+            <form class="enter-form" method="post" action="#">
+              <label class="visually-hidden" for="main-enter-email">Введите адрес электронной почты</label>
+              <input id="main-enter-email" name="enter-email" type="email" placeholder="Электронная почта">
+              <label class="visually-hidden" for="main-enter-password">Введите пароль</label>
+              <input id="main-enter-password" name="enter-password" type="password" placeholder="Пароль">
+              <button class="button" type="submit">Войти</button>
+              <a href="#">Забыли пароль?</a>
+              <a href="#">Новая регистрация</a>
+            </form>
           </li>
           <li class="header-cart">
-            <a href="#">пусто</a>
+            <a href="#" aria-label="Корзина">пусто</a>
           </li>
         </ul>
       </nav>
-      <p class="work-schedule">с 10 до 20, ежедневно</p>
-      <p class="phone-number">8 812 450-25-25</p>
+      <p class="work-schedule" aria-label="часы работы">с 10 до 20, ежедневно</p>
+      <p class="phone-number" aria-label="телефон">8 812 450-25-25</p>
     </header>
     <main class="content">
       <h1 class="visually-hidden">Глейси - магазин мороженого</h1>
@@ -74,9 +85,9 @@
         <img class="promo-image" src="img/slider-ice-cream1.png" width="1079" height="854" alt="пломбир с помадкой и клубничный щербет">
         <a class="button promo-button" href="#">давайте оба!</a>
       </section>
-      <span class="slider-button"></span>
-      <span class="slider-button"></span>
-      <span class="slider-button"></span>
+      <button class="slider-button text-hidden">Слайд 1</button>
+      <button class="slider-button text-hidden">Слайд 2</button>
+      <button class="slider-button text-hidden">Слайд 3</button>
       <section class="free-proposal">
         <h2 class="visually-hidden">Бесплатные предложения</h2>
         <ul class="free-proposal-list">
@@ -164,11 +175,15 @@
         <p>
           Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)
         </p>
-        <!--Здесь будет форма подписки-->
+        <form class="subscription-form" method="post" action="#">
+          <label class="visually-hidden" for="subscription-email">Введите адрес электронной почты</label>
+          <input id="subscription-email" name="subscription-email" type="email" placeholder="Электронная почта">
+          <button class="button" type="submit">Отправить</button>
+        </form>
       </section>
       <section class="contacts">
         <h2 class="visually-hidden">Наши контакты</h2>
-        <img class="map" src="img/map.jpg" width="1200" height="430" alt="Карта">
+        <img class="map" src="img/map.jpg" width="1200" height="430" alt="ул. Большая Конюшенная 19/8, Санкт-Петербург">
         <div class="contacts-description">
           <p class="contacts-adress">
             Адрес главного офиса и офлайн-магазина:
@@ -186,16 +201,16 @@
     <footer class="main-footer">
       <ul class="social">
         <li class="twitter">
-          <a href="#">Твиттер</a>
+          <a class="text-hidden" href="#">Твиттер</a>
         </li>
         <li class="instagramm">
-          <a href="#">Инстаграмм</a>
+          <a class="text-hidden" href="#">Инстаграмм</a>
         </li>
         <li class="facebook">
-          <a href="#">Фейсбук</a>
+          <a class="text-hidden" href="#">Фейсбук</a>
         </li>
         <li class="vk">
-          <a href="#">Вконтакте</a>
+          <a class="text-hidden" href="#">Вконтакте</a>
         </li>
       </ul>
       <ul class="for-constractors-menu">
@@ -226,8 +241,16 @@
     <section class="modal modal-feedback">
       <h2 class="visually-hidden">Форма обратной связи</h2>
       <p>Мы обязательно вам ответим!</p>
-      <!--Здесь будет форма-->
-      <span class="modal-close">x</span>
+      <button class="modal-close text-hidden">Закрыть форму</button>
+      <form class="feedback-form" method="post" action="#">
+        <label class="visually-hidden" for="feedback-name">Введите ваше имя</label>
+        <input id="feedback-name" name="feedback-name" type="text" placeholder="Как вас зовут?">
+        <label class="visually-hidden" for="feedback-email">Введите адрес электронной почты</label>
+        <input id="feedback-email" name="feedback-email" type="text" placeholder="Ваша почта для ответа?">
+        <label class="visually-hidden" for="feedback-text">Введите ваш вопрос</label>
+        <textarea id="feedback-text" name="feedback-text" placeholder="Напишите что-нибудь..."></textarea>
+        <button class="button" type="submit">Отправить</button>
+      </form>
     </section>
   </body>
 </html>

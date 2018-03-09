@@ -42,23 +42,36 @@
         </ul>
         <ul class="user-navigation">
           <li class="header-search">
-            <a href="#"></a>
-            <!--Здесь будет форма поиска-->
+            <a class="search-button text-hidden" href="#">Поиск</a>
+            <form class="search-form" method="get" action="#">
+              <label class="visually-hidden" for="main-search">Что ищем</label>
+              <input id="main-search" name="search" type="search" placeholder="Что ищем?">
+            </form>
           </li>
           <li class="header-enter">
             <a href="#">вход</a>
-            <!--Здесь будет форма входа-->
+            <form class="enter-form" method="post" action="#">
+              <label class="visually-hidden" for="main-enter-email">Введите адрес электронной почты</label>
+              <input id="main-enter-email" name="enter-email" type="email" placeholder="Электронная почта">
+              <label class="visually-hidden" for="main-enter-password">Введите пароль</label>
+              <input id="main-enter-password" name="enter-password" type="password" placeholder="Пароль">
+              <button class="button" type="submit">Войти</button>
+              <a href="#">Забыли пароль?</a>
+              <a href="#">Новая регистрация</a>
+            </form>
           </li>
           <li class="header-cart">
-            <a href="#">2 товара</a>
+            <a href="#" aria-label="Корзина">2 товара</a>
           </li>
         </ul>
       </nav>
       <section class="cart-content">
-        <h2 class="visually-hidden">Корзина</h2>
+        <h2 class="visually-hidden">Содержание корзины</h2>
         <table>
           <tr class="cart-item">
-            <td class="delete-button">x</td>
+            <td class="delete-button">
+              <button class="cart-button text-hidden" type="button">Удалить товар из корзины</button>
+            </td>
             <td class="item-image">
               <img class="cart-item-image" src="img/small-ice-cream1.png" width="33" height="33" alt="Пломбир с апельсиновым джемом">
             </td>
@@ -69,7 +82,9 @@
             <td class="item-total-price">300 руб.</td>
           </tr>
           <tr class="cart-item">
-            <td class="delete-button">x</td>
+            <td class="delete-button">
+              <button class="cart-button text-hidden" type="button">Удалить товар из корзины</button>
+            </td>
             <td class="item-image">
                 <img class="cart-item-image" src="img/small-ice-cream2.png" width="33" height="33" alt="Клубничный пломбир с присыпкой
                 из белого шоколада">
@@ -87,11 +102,11 @@
         </table>
         <a class="button" href="#">Оформить заказ</a>
       </section>
-      <p class="work-schedule">с 10 до 20, ежедневно</p>
-      <p class="phone-number">8 812 450-25-25</p>
+      <p class="work-schedule" aria-label="часы работы">с 10 до 20, ежедневно</p>
+      <p class="phone-number" aria-label="телефон">8 812 450-25-25</p>
     </header>
     <main class="content">
-      <ul class="breadcrumbs">
+      <ul class="breadcrumbs" aria-label="Хлебные крошки">
         <li>
           <a href="index.html">Главная</a>
         </li>
@@ -101,9 +116,75 @@
         <li>Сливочное</li>
       </ul>
       <h1>Сливочное мороженое</h1>
-      <form class="filters">
+      <form class="filters" method="get" action="#" oninput="minprice.value=minpricerange.value; maxprice.value=maxpricerange.value">
         <h2 class="visually-hidden">Форма выбора товара</h2>
-        <!--Здесь будет форма сортировки-->
+        <label for="sorting">Сортировка:</label>
+        <select id="sorting" name="sorting">
+          <option value="popular">по популярности</option>
+          <option value="cheap">сначала недорогие</option>
+          <option value="expensive">сначала дорогие</option>
+          <option value="fat">по жирности</option>
+        </select>
+        <fieldset class="price">
+          <legend>Цена:</legend>
+          <p class="price-value">
+            <output name="minprice"> </output>
+            <span> руб.&#8211;</span>
+            <output name="maxprice"> </output>
+            <span>руб.</span>
+          </p>
+          <label class="visually-hidden" for="min-price-range">выберете минимальную цену</label>
+          <input id="min-price-range" name="minpricerange" type="range" min="0" max="1000" step="100">
+          <label class="visually-hidden" for="max-price-range">выберете максимальную цену</label>
+          <input id="max-price-range" name="maxpricerange" type="range" min="0" max="1000" step="100">
+        </fieldset>
+        <fieldset class="fat">
+          <legend>Жирность:</legend>
+          <ul>
+            <li>
+              <input id="fat-1" name="fat-select" type="radio" value="0">
+              <label for="fat-1">0%</label>
+            </li>
+            <li>
+              <input id="fat-2" name="fat-select" type="radio" value="10" checked>
+              <label for="fat-2">до 10%</label>
+            </li>
+            <li>
+              <input id="fat-3" name="fat-select" type="radio" value="30">
+              <label for="fat-3">до 30%</label>
+            </li>
+            <li>
+              <input id="fat-4" name="fat-select" type="radio" value="over 30">
+              <label for="fat-4">выше 30%</label>
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset class="filler">
+          <legend>Наполнители:</legend>
+          <ul>
+            <li>
+              <input id="filler-1" name="chocolate" type="checkbox" checked>
+              <label for="filler-1">шоколадные</label>
+            </li>
+            <li>
+              <input id="filler-2" name="sugar-powders" type="checkbox" checked>
+              <label for="filler-2">сахарные присыпки</label>
+            </li>
+            <li>
+              <input id="filler-3" name="fruit" type="checkbox">
+              <label for="filler-3">фрукты</label>
+            </li>
+            <li>
+              <input id="filler-4" name="syrups" type="checkbox">
+              <label for="filler-4">сиропы</label>
+            </li>
+            <li>
+              <input id="filler-5" name="jams" type="checkbox">
+              <label for="filler-5">джемы</label>
+            </li>
+          </ul>
+        </fieldset>
+        <button class="filters-button" type="submit">Применить</button>
       </form>
       <section class="ice-cream-types">
         <h2 class="visually-hidden">Список товаров</h2>
@@ -230,9 +311,9 @@
           </li>
         </ul>
       </section>
-      <ul class="pagination">
+      <ul class="pagination" aria-label="преход на другую страницу">
         <li>
-          <a href="#">&#60;</a>
+          <a class="text-hidden" href="#">назад</a>
         </li>
         <li>
           <a href="#">1</a>
@@ -250,23 +331,23 @@
           <a href="#">5</a>
         </li>
         <li>
-          <a href="#">&#62;</a>
+          <a class="text-hidden" href="#">вперед</a>
         </li>
       </ul>
     </main>
     <footer class="main-footer">
         <ul class="social">
           <li class="twitter">
-            <a href="#">Твиттер</a>
+            <a class="text-hidden" href="#">Твиттер</a>
           </li>
           <li class="instagramm">
-            <a href="#">Инстаграмм</a>
+            <a class="text-hidden" href="#">Инстаграмм</a>
           </li>
           <li class="facebook">
-            <a href="#">Фейсбук</a>
+            <a class="text-hidden" href="#">Фейсбук</a>
           </li>
           <li class="vk">
-            <a href="#">Вконтакте</a>
+            <a class="text-hidden" href="#">Вконтакте</a>
           </li>
         </ul>
         <ul class="for-constractors-menu">
