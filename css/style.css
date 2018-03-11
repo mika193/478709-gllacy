@@ -562,15 +562,23 @@ a {
   width: 22px;
   height: 22px;
   background-image: url(../img/radio-off.svg);
+  background-size: contain;
 }
-.fat-list-button:hover::before{
+.fat-list-button:hover::before {
   background-image: url(../img/radio-off-hover.svg);
+}
+.fat-list-radio:focus + .fat-list-button::before {
+  background-image: url(../img/radio-off-focus.svg);
 }
 .fat-list-radio:checked + .fat-list-button::before {
   background-image: url(../img/radio-on.svg);
 }
-.fat-list-radio:checked + .fat-list-button:hover::before {
+.fat-list-radio:checked + .fat-list-button:hover::before,
+.fat-list-radio:focus:checked + .fat-list-button:hover::before {
   background-image: url(../img/radio-on-hover.svg);
+}
+.fat-list-radio:focus:checked + .fat-list-button::before {
+  background-image: url(../img/radio-on-focus.svg);
 }
 .fat-list-radio:disabled + .fat-list-button::before {
   background-image: url(../img/radio-off-disabled.svg);
@@ -588,11 +596,17 @@ a {
   height: 20px;
   background-image: url(../img/checkbox-off.svg);
 }
-.filler-list-button:hover::before{
+.filler-list-button:hover::before {
   background-image: url(../img/checkbox-off-hover.svg);
+}
+.filler-list-checkbox:focus + .filler-list-button::before {
+  background-image: url(../img/checkbox-off-focus.svg);
 }
 .filler-list-checkbox:checked + .filler-list-button::before {
   background-image: url(../img/checkbox-on.svg);
+}
+.filler-list-checkbox:focus:checked + .filler-list-button::before {
+  background-image: url(../img/checkbox-on-focus.svg);
 }
 .filler-list-checkbox:checked + .filler-list-button:hover::before {
   background-image: url(../img/checkbox-on-hover.svg);
