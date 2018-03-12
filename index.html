@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Глейси</title>
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
   </head>
@@ -54,16 +54,16 @@
             <a class="user-navigation-link search-button" href="#" aria-label="Поиск"></a>
             <form class="search-form" method="get" action="#">
               <label class="visually-hidden" for="main-search">Что ищем</label>
-              <input id="main-search" name="search" type="search" placeholder="Что ищем?">
+              <input class="ashes-field" id="main-search" name="search" type="search" placeholder="Что ищем?">
             </form>
           </li>
           <li class="header-enter">
             <a class="user-navigation-link" href="#">Вход</a>
             <form class="enter-form" method="post" action="#">
               <label class="visually-hidden" for="main-enter-email">Введите адрес электронной почты</label>
-              <input id="main-enter-email" name="enter-email" type="email" placeholder="Электронная почта">
+              <input class="ashes-field" id="main-enter-email" name="enter-email" type="email" placeholder="Электронная почта">
               <label class="visually-hidden" for="main-enter-password">Введите пароль</label>
-              <input id="main-enter-password" name="enter-password" type="password" placeholder="Пароль">
+              <input class="ashes-field" id="main-enter-password" name="enter-password" type="password" placeholder="Пароль">
               <button class="button" type="submit">Войти</button>
               <a class="enter-form-link" href="#">
                 <span>Забыли пароль?</span>
@@ -181,7 +181,9 @@
       </section>
       <article class="blog-news">
         <h2>Новое в нашем блоге</h2>
-        <a href="#">10 способов сервировки фруктовых щербетов к столу</a>
+        <a href="#">
+          <span>10 способов сервировки фруктовых щербетов к столу</span>
+        </a>
       </article>
       <section class="newsletter-subscription">
         <h2 class="visually-hidden">Подписка на рассылку</h2>
@@ -191,7 +193,7 @@
           </p>
           <form class="subscription-form" method="post" action="#">
             <label class="visually-hidden" for="subscription-email">Введите адрес электронной почты</label>
-            <input id="subscription-email" name="subscription-email" type="email" placeholder="Электронная почта">
+            <input class="ashes-field" id="subscription-email" name="subscription-email" type="email" placeholder="Электронная почта">
             <button class="button" type="submit">Отправить</button>
           </form>
         </div>
@@ -279,11 +281,11 @@
       </button>
       <form class="feedback-form" method="post" action="#">
         <label class="visually-hidden" for="feedback-name">Введите ваше имя</label>
-        <input id="feedback-name" name="feedback-name" type="text" placeholder="Как вас зовут?">
+        <input class="ashes-field" id="feedback-name" name="feedback-name" type="text" placeholder="Как вас зовут?">
         <label class="visually-hidden" for="feedback-email">Введите адрес электронной почты</label>
-        <input id="feedback-email" name="feedback-email" type="text" placeholder="Ваша почта для ответа?">
+        <input class="ashes-field" id="feedback-email" name="feedback-email" type="text" placeholder="Ваша почта для ответа?">
         <label class="visually-hidden" for="feedback-text">Введите ваш вопрос</label>
-        <textarea id="feedback-text" name="feedback-text" placeholder="Напишите что-нибудь..."></textarea>
+        <textarea class="ashes-field" id="feedback-text" name="feedback-text" placeholder="Напишите что-нибудь..."></textarea>
         <button class="button" type="submit">Отправить</button>
       </form>
     </section>

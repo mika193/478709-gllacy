@@ -1,4 +1,5 @@
 body {
+  font-weight: 400;
   font-size: 16px;
   line-height: 18px;
   font-family: "Roboto", "Arial", sans-serif;
@@ -16,22 +17,60 @@ a {
   margin: -1px;
 }
 .button {
-  font-weight: bold;
+  font-weight: 700;
   font-size: 18px;
   line-height: 24px;
   color: #fefefe;
   background-color: #e84d37;
   background-image: linear-gradient(to bottom, #e74a35, #f26843 );
+  border: none;
+  border-radius: 31px;
 }
 .button:hover {
   background-image: linear-gradient(to bottom, #f58669, #ec6f5e );
 }
 .button:active {
   background-image: linear-gradient(to bottom, #d74632, #e1613e);
+  color: #fceeec;
+}
+.ashes-field::-webkit-input-placeholder {
+  font-weight: 400;
+  color: #999999;
+}
+.ashes-field::-moz-placeholder {
+  font-weight: 400;
+  color: #999999;
+}
+.ashes-field:-ms-input-placeholder {
+  font-weight: 400;
+  color: #999999;
+}
+.ashes-field:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+.ashes-field:focus::-moz-placeholder {
+  color: transparent;
+}
+.ashes-field:focus:-ms-input-placeholder {
+  color: transparent;
+}
+.ashes-field {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 24px;
+  color: #323232;
+  background-color: #ffffff;
+  border: 1px solid rgba(178, 178, 178, 0.52);
+}
+.ashes-field:hover {
+  border: 2px solid rgba(154, 154, 154, 0.52);
+}
+.ashes-field:focus {
+  border: 2px solid rgba(46, 136, 228, 0.52)
 }
 .site-navigation {
   list-style: none;
-  font-weight: bold;
+  font-weight: 700;
 }
 .site-navigation-link {
   text-decoration: underline;
@@ -41,19 +80,24 @@ a {
   color: #ffffff;
 }
 .new-items {
-  font-weight: bold;
+  font-weight: 700;
 }
 .site-navigation li:hover {
   background-color: #f7f6f3;
+  border-radius: 31px;
+}
+.site-navigation li:active {
+  background-color: #ededed;
+  border-radius: 31px;
 }
 .site-navigation-link span:hover {
   color: #333333;
 }
 .item-navigation {
-  font-weight: normal;
+  font-weight: 400;
   font-size: 14px;
   line-height: 16px;
-   color: #323232;
+  color: #323232;
   list-style: none;
   background-color: #f8f7f4;
 }
@@ -74,7 +118,7 @@ a {
   list-style: none;
 }
 .user-navigation li {
-  font-weight: bold;
+  font-weight: 500;
   font-size: 14px;
   background-color: rgba(255, 255, 255, 0.2);
 }
@@ -99,13 +143,7 @@ a {
   background-image: url(../img/search-hover.svg);
 }
 .search-form {
-  font-size: 14px;
-  line-height: 24px;
-  color: #323232;
   background-color: #f8f7f4;
-}
-.search-form input:focus {
-  font-weight: bold;
 }
 .header-enter::before {
   content: "";
@@ -121,9 +159,6 @@ a {
   line-height: 24px;
   color: #999999;
   background-color: #f8f7f4;
-}
-.enter-form input:focus {
-  font-weight: bold;
 }
 .enter-form-link:hover,
 .enter-form-link:active {
@@ -170,27 +205,26 @@ a {
   color: #999999;
 }
 .cart-total-price {
-  font-weight: bold;
+  font-weight: 700;
   font-size: 15px;
   line-height: 18px;
 }
 .work-schedule {
-  font-weight: bold;
+  font-weight: 700;
   font-size: 14px;
   line-height: 16px;
 }
 .phone-number {
-  font-weight: bold;
+  font-weight: 700;
   font-size: 22px;
   line-height: 24px;
 }
 .promo-actions h2 {
-  font-weight: bold;
+  font-weight: 700;
   font-size: 60px;
   line-height: 60.35px;
 }
 .promo-actions .button {
-  font-weight: bold;
   font-size: 32px;
   line-height: 44px;
   color: #ffffff;
@@ -199,18 +233,28 @@ a {
   list-style: none;
 }
 .free-proposal-item h3 {
-  font-weight: bold;
+  font-weight: 700;
   font-size: 35px;
   line-height: 41px;
 }
 .free-proposal-item p {
-  font-weight: bold;
+  font-weight: 700;
   font-size: 18px;
   line-height: 22px;
+}
+.free-proposal-item .button {
+  color: #ffffff;
 }
 .raspberries {
   background-color: #713f45;
   background-image: url(../img/raspberries.jpg);
+}
+.raspberries .button {
+  background-image: linear-gradient(to bottom, #ca3824, #f26843);
+}
+.raspberries .button:hover {
+  color: #fefefe;
+  background-image: linear-gradient(to bottom, #e74a35, #f26843);
 }
 .chocolate {
   background-color: #665a51;
@@ -226,12 +270,13 @@ a {
   background-image: url(../img/hit.svg)
 }
 .bestsellers-item .item-price {
-  font-weight: bold;
+  font-weight: 700;
   font-size: 30px;
   line-height: 45px;
 }
 .bestsellers-item span {
   font-size: 45px;
+  word-spacing: -5px;
 }
 .bestsellers-item .item-title-link:hover,
 .bestsellers-item .item-title-link,:active {
@@ -260,7 +305,7 @@ a {
   background-image: url(../img/wafer.jpg);
 }
 .features-slogan {
-  font-weight: bold;
+  font-weight: 500;
   font-size: 24px;
   line-height: 30px;
 }
@@ -285,20 +330,29 @@ a {
   background-image: url(../img/thermometer.svg);
 }
 .blog-news {
-  font-weight: bold;
   color: #323232;
   line-height: 22px;
   background-color: #fcfcfc;
   background-image: url(../img/strawberry.jpg);
 }
 .blog-news h2 {
+  font-weight: 500;
   font-size: 16px;
 }
 .blog-news a{
+  font-weight: 700;
   font-size: 24px;
   line-height: 30px;
   color: inherit;
   text-decoration: underline;
+}
+.blog-news a:hover,
+.blog-news a:active {
+  color: rgba(232, 77, 55, 0.3);
+}
+.blog-news span:hover,
+.blog-news span:active {
+  color: #e84d37;
 }
 .newsletter-subscription {
   background-color: #e1d5dc;
@@ -312,13 +366,7 @@ a {
   color: #5a5a5a;
 }
 .newsletter-subscription input {
-  color: #999999;
-  line-height: 24px;
-  background-color: #ffffff;
-}
-.newsletter-subscription input:focus {
-  font-weight: bold;
-  color: #323232;
+  font-size: 16px;
 }
 .contacts-description {
   font-size: 14px;
@@ -328,7 +376,7 @@ a {
 }
 .contacts-adress strong,
 .contacts-phone strong {
-  font-weight: bold;
+  font-weight: 700;
   font-size: 18px;
   line-height: 24px;
 }
@@ -405,7 +453,7 @@ a {
   color: rgba(255, 255, 255, 0.2);
 }
 .constractors {
-  font-weight: bold;
+  font-weight: 700;
 }
 .for-constractors-menu .decoration {
   color: #ffffff;
@@ -437,7 +485,7 @@ a {
   background-color: #f8f7f4;
 }
 .modal-feedback p {
-  font-weight: bold;
+  font-weight: 500;
   font-size: 24px;
   line-height: 28px;
   color: #323232;
@@ -447,14 +495,7 @@ a {
 }
 .modal-feedback input,
 .modal-feedback textarea {
-  line-height: 24px;
-  color: #999999;
-  background-color: #ffffff;
-}
-.modal-feedback input:focus,
-.modal-feedback textarea:focus {
-  font-weight: bold;
-  color: #323232;
+  font-size: 16px;
 }
 /*Каталог*/
 .breadcrumbs {
@@ -478,12 +519,12 @@ a {
   color: #ffbc9e;
 }
 .content h1 {
-  font-weight: bold;
+  font-weight: 700;
   font-size: 35px;
   line-height: 41px;
 }
 .filters {
-  font-weight: bold;
+  font-weight: 500;
 }
 .sorting-filter-label {
   font-size: 14px;
@@ -623,6 +664,8 @@ a {
   line-height: inherit;
   color: inherit;
   background-color: rgba(255, 255, 255, 0.2);
+  border: 2px solid #ffffff;
+  border-radius: 18px;
 }
 .filters-button:hover {
   color: #323232;
@@ -631,17 +674,19 @@ a {
 .filters-button:active {
   color: #323232;
   background-color: #ededed;
+  border: none;
 }
 .ice-cream-list {
   list-style: none;
 }
 .ice-cream-item .item-price {
-  font-weight: bold;
+  font-weight: 700;
   font-size: 30px;
   line-height: 45px;
 }
 .ice-cream-item span {
   font-size: 45px;
+  word-spacing: -5px;
 }
 .ice-cream-item .item-title-link:hover,
 .ice-cream-item .item-title-link,:active {
@@ -664,7 +709,7 @@ a {
   background-color: rgba(253, 253, 252, 0.2);
 }
 .pagination {
-  font-weight: bold;
+  font-weight: 500;
   list-style: none;
 }
 .pagination li {
