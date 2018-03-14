@@ -73,25 +73,29 @@ a {
   font-weight: 700;
 }
 .site-navigation-link {
-  text-decoration: underline;
-  color: rgba(255, 255, 255, 0.2);
-}
-.site-navigation-link span {
   color: #ffffff;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  position: relative;
+}
+.site-navigation-link:hover {
+  color: #333333;
+  background-color: #f7f6f3;
+  border-bottom: none;
+  border-radius: 16px;
+}
+.site-navigation-link:active {
+  color: #333333;
+  background-color: #ededed;
+  border-bottom: none;
+  border-radius: 16px;
+}
+.site-navigation-link.current {
+  background-color: #d07058;
+  border-bottom: none;
+  border-radius: 16px;
 }
 .new-items {
   font-weight: 700;
-}
-.site-navigation li:hover {
-  background-color: #f7f6f3;
-  border-radius: 31px;
-}
-.site-navigation li:active {
-  background-color: #ededed;
-  border-radius: 31px;
-}
-.site-navigation-link span:hover {
-  color: #333333;
 }
 .item-navigation {
   font-weight: 400;
@@ -122,11 +126,9 @@ a {
   font-size: 14px;
   background-color: rgba(255, 255, 255, 0.2);
 }
-.user-navigation a {
-  color: inherit;
-}
 .user-navigation-link {
   line-height: 16px;
+  color: inherit;
 }
 .user-navigation li:hover {
   color: #323232;
@@ -160,23 +162,16 @@ a {
   color: #999999;
   background-color: #f8f7f4;
 }
-.enter-form-link:hover,
-.enter-form-link:active {
-  text-decoration: underline;
-  color: rgba(232, 77, 55, 0.3);
-}
 .enter-form-link {
   font-size: 13px;
   line-height: 24px;
-  text-decoration: underline;
-  color: rgba(50, 50, 50, 0.3);
-}
-.enter-form-link span {
   color: #323232;
+  border-bottom: 1px solid rgba(50, 50, 50, 0.3);
 }
-.enter-form-link span:hover,
-.enter-form-link span:active {
+.enter-form-link:hover,
+.enter-form-link:active {
   color: #e84d37;
+  border-bottom-color: rgba(232, 77, 55, 0.3);
 }
 .user-navigation .full-cart {
   color: #323232;
@@ -222,7 +217,7 @@ a {
 .promo-actions h2 {
   font-weight: 700;
   font-size: 60px;
-  line-height: 60.35px;
+  line-height: 61px;
 }
 .promo-actions .button {
   font-size: 32px;
@@ -260,7 +255,7 @@ a {
   background-color: #665a51;
   background-image: url(../img/chocolate.jpg)
 }
-.bestsellers-list {
+.ice-cream-list {
   list-style: none;
 }
 .bestsellers-item::before {
@@ -269,34 +264,28 @@ a {
   height: 61px;
   background-image: url(../img/hit.svg)
 }
-.bestsellers-item .item-price {
+.ice-cream-item {
+  padding-bottom: 50px;
+}
+.ice-cream-item .item-price {
   font-weight: 700;
   font-size: 30px;
   line-height: 45px;
 }
-.bestsellers-item span {
+.item-price span {
   font-size: 45px;
   word-spacing: -5px;
 }
-.bestsellers-item .item-title-link:hover,
-.bestsellers-item .item-title-link,:active {
-  text-decoration: underline;
-  color: rgba(255, 188, 158, 0.3);
-}
-.bestsellers-item .item-title-link {
-  text-decoration: underline;
-  color: rgba(255, 255, 255, 0.2);
-}
-.bestsellers-item .item-title {
+.ice-cream-item .item-title-link {
+  font-weight: 500;
   line-height: 22px;
   color: #ffffff;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
-.bestsellers-item .item-title:hover,
-.bestsellers-item .item-title:active {
+.ice-cream-item .item-title-link:hover,
+.ice-cream-item .item-title-link:active {
   color: #ffbc9e;
-}
-.bestsellers-item:hover {
-  background-color: rgba(253, 253, 252, 0.2);
+  border-bottom-color: rgba(255, 188, 158, 0.3);
 }
 .features {
   line-height: 22px;
@@ -345,6 +334,7 @@ a {
   line-height: 30px;
   color: inherit;
   text-decoration: underline;
+  text-decoration-skip-ink: none;
 }
 .blog-news a:hover,
 .blog-news a:active {
@@ -354,6 +344,8 @@ a {
 .blog-news span:active {
   color: #e84d37;
 }
+/*Здесь оставила span как было, потому что псевдоэлемент здесь не подойдет, так как на макете текст в три строчки,
+а border не подходит, так как с ним получается вот так https://cloud.mail.ru/public/4hbo/nRkzoLeAw, а должно быть так https://cloud.mail.ru/public/EZbU/GJEU3T6QT*/
 .newsletter-subscription {
   background-color: #e1d5dc;
   background-image: url(../img/post-background.svg);
@@ -444,42 +436,30 @@ a {
   font-size: 13px;
   list-style: none;
 }
+.for-constractors-menu a {
+  color: #ffffff;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
 .for-constractors-menu a:hover,
 .for-constractors-menu a:active {
-  color: rgba(255, 188, 158, 0.3);
-}
-.for-constractors-menu a {
-  text-decoration: underline;
-  color: rgba(255, 255, 255, 0.2);
+  color: #ffbc9e;
+  border-bottom-color: rgba(255, 188, 158, 0.3);
 }
 .constractors {
   font-weight: 700;
 }
-.for-constractors-menu .decoration {
-  color: #ffffff;
-}
-.for-constractors-menu .decoration:hover,
-.for-constractors-menu .decoration:active {
-  color: #ffbc9e;
-}
 .academy-link {
-  text-decoration: underline;
-  color: rgba(255, 255, 255, 0.2);
+  color: #fefefe;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 .academy-link:hover,
 .academy-link:active {
-  color: rgba(255, 188, 158, 0.3);
+  color: #ffbc9e;
+  border-bottom-color: rgba(255, 188, 158, 0.3);
 }
 .copyright p {
   font-size: 12px;
   color: #fefefe;
-}
-.academy-link span {
-  color: #fefefe;
-}
-.academy-link span:hover,
-.academy-link span:active {
-  color: #ffbc9e;
 }
 .modal-feedback {
   background-color: #f8f7f4;
@@ -504,19 +484,13 @@ a {
 .breadcrumbs-link {
   font-size: 14px;
   line-height: 16px;
-  text-decoration: underline;
-  color: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 .breadcrumbs-link:hover,
 .breadcrumbs-link:active {
-  color: rgba(255, 188, 158, 0.3);
-}
-.breadcrumbs-link span {
-  color: #ffffff;
-}
-.breadcrumbs-link span:hover,
-.breadcrumbs-link span:active {
   color: #ffbc9e;
+  border-bottom-color: rgba(255, 188, 158, 0.3);
 }
 .content h1 {
   font-weight: 700;
@@ -536,6 +510,7 @@ a {
   line-height: inherit;
   color: #ffffff;
   background-color: rgba(255, 255, 255, 0.2);
+  border: none;
 }
 .sorting-filter::before {
   content: "";
@@ -581,6 +556,7 @@ a {
   line-height: 16px;
   color: #ffffff;
   background-color: #98ada1;
+  border: none;
 }
 .price-range-background {
   width: 218px;
@@ -675,38 +651,6 @@ a {
   color: #323232;
   background-color: #ededed;
   border: none;
-}
-.ice-cream-list {
-  list-style: none;
-}
-.ice-cream-item .item-price {
-  font-weight: 700;
-  font-size: 30px;
-  line-height: 45px;
-}
-.ice-cream-item span {
-  font-size: 45px;
-  word-spacing: -5px;
-}
-.ice-cream-item .item-title-link:hover,
-.ice-cream-item .item-title-link,:active {
-  text-decoration: underline;
-  color: rgba(255, 188, 158, 0.3);
-}
-.ice-cream-item .item-title-link {
-  text-decoration: underline;
-  color: rgba(255, 255, 255, 0.2);
-}
-.ice-cream-item .item-title {
-  line-height: 22px;
-  color: #ffffff;
-}
-.ice-cream-item .item-title:hover,
-.ice-cream-item .item-title:active {
-  color: #ffbc9e;
-}
-.ice-cream-item:hover {
-  background-color: rgba(253, 253, 252, 0.2);
 }
 .pagination {
   font-weight: 500;
