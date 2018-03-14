@@ -338,14 +338,9 @@ a {
 }
 .blog-news a:hover,
 .blog-news a:active {
-  color: rgba(232, 77, 55, 0.3);
-}
-.blog-news span:hover,
-.blog-news span:active {
   color: #e84d37;
+  text-decoration-color: rgba(232, 77, 55, 0.3);
 }
-/*Здесь оставила span как было, потому что псевдоэлемент здесь не подойдет, так как на макете текст в три строчки,
-а border не подходит, так как с ним получается вот так https://cloud.mail.ru/public/4hbo/nRkzoLeAw, а должно быть так https://cloud.mail.ru/public/EZbU/GJEU3T6QT*/
 .newsletter-subscription {
   background-color: #e1d5dc;
   background-image: url(../img/post-background.svg);
