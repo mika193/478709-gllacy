@@ -339,8 +339,10 @@ a {
 .blog-news a:hover,
 .blog-news a:active {
   color: #e84d37;
-  text-decoration-color: rgba(232, 77, 55, 0.3);
-}
+  text-decoration: none;
+  background-image: linear-gradient(to bottom, transparent 0%, transparent 95%, rgba(232, 77, 55, 0.3) 95%, rgba(232, 77, 55, 0.3) 100%);
+  background-position: left bottom 2px;
+ }
 .newsletter-subscription {
   background-color: #e1d5dc;
   background-image: url(../img/post-background.svg);
