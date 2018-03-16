@@ -7,19 +7,19 @@
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
   </head>
-  <body>
-    <header class="main-header">
+  <body class="catalog-body">
+    <header class="main-header container">
       <nav class="main-navigation">
         <a class="header-logo" href="index.html">
           <img class="logo-image" src="img/logo.svg" width="154" height="64" alt="Глейси">
         </a>
         <ul class="site-navigation">
-          <li>
-            <a class="site-navigation-link" href="#">Каталог</a>
+          <li class="site-navigation-item">
+            <a class="site-navigation-link current" href="#">Каталог</a>
             <ul class="item-navigation">
-              <li>
+              <li class="new-items">
                 <a href="#">
-                  <strong class="new-items">Новинки</strong>
+                  <strong>Новинки</strong>
                 </a>
               </li>
               <li>
@@ -36,35 +36,39 @@
               </li>
             </ul>
           </li>
-          <li>
+          <li class="site-navigation-item">
             <a class="site-navigation-link" href="#">Доставка и оплата</a>
           </li>
           <li>
             <a class="site-navigation-link" href="#">О компании</a>
-          </li>
+          </li class="site-navigation-item">
         </ul>
         <ul class="user-navigation">
           <li class="header-search">
-            <a class="user-navigation-link search-button" href="#" aria-label="Поиск"></a>
+            <a class="user-navigation-link search-button" href="#" aria-label="Поиск">Поиск</a>
             <form class="search-form" method="get" action="#">
               <label class="visually-hidden" for="main-search">Что ищем</label>
-              <input class="ashes-field" id="main-search" name="search" type="search" placeholder="Что ищем?">
+              <input class="entry-field" id="main-search" name="search" type="search" placeholder="Что ищем?">
             </form>
           </li>
           <li class="header-enter">
-            <a class="user-navigation-link" href="#">Вход</a>
+            <a class="user-navigation-link enter-button" href="#">Вход</a>
             <form class="enter-form" method="post" action="#">
               <label class="visually-hidden" for="main-enter-email">Введите адрес электронной почты</label>
-              <input class="ashes-field" id="main-enter-email" name="enter-email" type="email" placeholder="Электронная почта">
+              <input class="entry-field" id="main-enter-email" name="enter-email" type="email" placeholder="Электронная почта">
               <label class="visually-hidden" for="main-enter-password">Введите пароль</label>
-              <input class="ashes-field" id="main-enter-password" name="enter-password" type="password" placeholder="Пароль">
-              <button class="button" type="submit">Войти</button>
-              <a class="enter-form-link" href="#">Забыли пароль?</a>
-              <a class="enter-form-link" href="#">Новая регистрация</a>
+              <input class="entry-field" id="main-enter-password" name="enter-password" type="password" placeholder="Пароль">
+              <div class="enter-button-wrapper">
+                <button class="button" type="submit">Войти</button>
+                <p>
+                  <a class="enter-form-link" href="#">Забыли пароль?</a>
+                  <a class="enter-form-link" href="#">Новая регистрация</a>
+                </p>
+              </div>
             </form>
           </li>
           <li class="header-cart full-cart">
-            <a class="user-navigation-link" href="#" aria-label="Корзина">2 товара</a>
+            <a class="user-navigation-link cart-open-button" href="#" aria-label="Корзина">2 товара</a>
           </li>
         </ul>
       </nav>
@@ -111,7 +115,7 @@
       <p class="work-schedule" aria-label="часы работы">с 10 до 20, ежедневно</p>
       <p class="phone-number" aria-label="телефон">8 812 450-25-25</p>
     </header>
-    <main class="content">
+    <main class="catalog-main container">
       <ul class="breadcrumbs" aria-label="Хлебные крошки">
         <li>
           <a class="breadcrumbs-link" href="index.html">Главная</a>
@@ -124,13 +128,15 @@
       <h1>Сливочное мороженое</h1>
       <form class="filters" method="get" action="#">
         <h2 class="visually-hidden">Форма выбора товара</h2>
-        <label class="sorting-filter-label" for="sorting">Сортировка:</label>
-        <select class="sorting-filter" id="sorting" name="sorting">
-          <option value="popular">по популярности</option>
-          <option value="cheap">сначала недорогие</option>
-          <option value="expensive">сначала дорогие</option>
-          <option value="fat">по жирности</option>
-        </select>
+        <p class="sorting-filter-wrapper">
+          <label class="sorting-filter-label" for="sorting">Сортировка:</label>
+          <select class="sorting-filter" id="sorting" name="sorting">
+            <option value="popular">по популярности</option>
+            <option value="cheap">сначала недорогие</option>
+            <option value="expensive">сначала дорогие</option>
+            <option value="fat">по жирности</option>
+          </select>
+        </p>
         <fieldset class="price">
           <legend>Цена:</legend>
           <p class="price-value">
@@ -203,96 +209,120 @@
             <p class="item-price">
               <span>310 &#8381;</span>/кг
             </p>
-            <a class="item-title-link" href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
-            <a class="button item-button" href="#">Быстрый просмотр</a>
+            <p class="ice-cream-wrapper">
+              <a class="item-title-link" href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
+              <a class="button item-button" href="#">Быстрый просмотр</a>
+            </p>
           </li>
           <li class="ice-cream-item">
             <img class="item-image" src="img/ice-cream2.jpg" width="267" height="267" alt="Сливочно-кофейное с кусочками шоколада">
             <p class="item-price">
               <span>380 &#8381;</span>/кг
             </p>
-            <a class="item-title-link" href="#">Сливочно-кофейное с кусочками шоколада</a>
-            <a class="button item-button" href="#">Быстрый просмотр</a>
+            <p class="ice-cream-wrapper">
+              <a class="item-title-link" href="#">Сливочно-кофейное с кусочками шоколада</a>
+              <a class="button item-button" href="#">Быстрый просмотр</a>
+            </p>
           </li>
           <li class="ice-cream-item">
             <img class="item-image" src="img/ice-cream3.jpg" width="267" height="267" alt="Сливочно-клубничное с присыпкой из белого шоколада">
             <p class="item-price">
               <span>355 &#8381;</span>/кг
             </p>
-            <a class="item-title-link" href="#">Сливочно-клубничное с присыпкой из белого шоколада</a>
-            <a class="button item-button" href="#">Быстрый просмотр</a>
+            <p class="ice-cream-wrapper">
+              <a class="item-title-link" href="#">Сливочно-клубничное с присыпкой из белого шоколада</a>
+              <a class="button item-button" href="#">Быстрый просмотр</a>
+            </p>
           </li>
           <li class="ice-cream-item">
             <img class="item-image" src="img/ice-cream4.jpg" width="267" height="267" alt="Сливочное крем-брюле с карамельной подливкой">
             <p class="item-price">
               <span>415 &#8381;</span>/кг
             </p>
-            <a class="item-title-link" href="#">Сливочное крем-брюле с карамельной подливкой</a>
-            <a class="button item-button" href="#">Быстрый просмотр</a>
+            <p class="ice-cream-wrapper">
+              <a class="item-title-link" href="#">Сливочное крем-брюле с карамельной подливкой</a>
+              <a class="button item-button" href="#">Быстрый просмотр</a>
+            </p>
           </li>
           <li class="ice-cream-item">
             <img class="item-image" src="img/ice-cream5.jpg" width="267" height="267" alt="Сливочное с брусничным джемом">
             <p class="item-price">
               <span>325 &#8381;</span>/кг
             </p>
-            <a class="item-title-link" href="#">Сливочное с брусничным джемом</a>
-            <a class="button item-button" href="#">Быстрый просмотр</a>
+            <p class="ice-cream-wrapper">
+              <a class="item-title-link" href="#">Сливочное с брусничным джемом</a>
+              <a class="button item-button" href="#">Быстрый просмотр</a>
+            </p>
           </li>
           <li class="ice-cream-item">
             <img class="item-image" src="img/ice-cream6.jpg" width="267" height="267" alt="Сливочно-черничное с цельными ягодами черники ">
             <p class="item-price">
               <span>410 &#8381;</span>/кг
             </p>
-            <a class="item-title-link" href="#">Сливочно-черничное с цельными ягодами черники</a>
-            <a class="button item-button" href="#">Быстрый просмотр</a>
+            <p class="ice-cream-wrapper">
+              <a class="item-title-link" href="#">Сливочно-черничное с цельными ягодами черники</a>
+              <a class="button item-button" href="#">Быстрый просмотр</a>
+            </p>
           </li>
           <li class="ice-cream-item">
             <img class="item-image" src="img/ice-cream7.jpg" width="267" height="267" alt="Сливочно-лимонное с карамельной присыпкой">
             <p class="item-price">
               <span>375 &#8381;</span>/кг
             </p>
-            <a class="item-title-link" href="#">Сливочно-лимонное с карамельной присыпкой</a>
-            <a class="button item-button" href="#">Быстрый просмотр</a>
+            <p class="ice-cream-wrapper">
+              <a class="item-title-link" href="#">Сливочно-лимонное с карамельной присыпкой</a>
+              <a class="button item-button" href="#">Быстрый просмотр</a>
+            </p>
           </li>
           <li class="ice-cream-item">
             <img class="item-image" src="img/ice-cream8.jpg" width="267" height="267" alt="Сливочное с шоколадной стружкой">
             <p class="item-price">
               <span>320 &#8381;</span>/кг
             </p>
-            <a class="item-title-link" href="#">Сливочное с шоколадной стружкой</a>
-            <a class="button item-button" href="#">Быстрый просмотр</a>
+            <p class="ice-cream-wrapper">
+              <a class="item-title-link" href="#">Сливочное с шоколадной стружкой</a>
+              <a class="button item-button" href="#">Быстрый просмотр</a>
+            </p>
           </li>
           <li class="ice-cream-item">
             <img class="item-image" src="img/ice-cream9.jpg" width="267" height="267" alt="Сливочно-ванильное с кусочками шоколада">
             <p class="item-price">
               <span>440 &#8381;</span>/кг
             </p>
-            <a class="item-title-link" href="#">Сливочно-ванильное с кусочками шоколада</a>
-            <a class="button item-button" href="#">Быстрый просмотр</a>
+            <p class="ice-cream-wrapper">
+              <a class="item-title-link" href="#">Сливочно-ванильное с кусочками шоколада</a>
+              <a class="button item-button" href="#">Быстрый просмотр</a>
+            </p>
           </li>
           <li class="ice-cream-item">
             <img class="item-image" src="img/ice-cream10.jpg" width="267" height="267" alt="Сливочноe с ментоловым сиропом">
             <p class="item-price">
               <span>435 &#8381;</span>/кг
             </p>
-            <a class="item-title-link" href="#">Сливочноe с ментоловым сиропом</a>
-            <a class="button item-button" href="#">Быстрый просмотр</a>
+            <p class="ice-cream-wrapper">
+              <a class="item-title-link" href="#">Сливочноe с ментоловым сиропом</a>
+              <a class="button item-button" href="#">Быстрый просмотр</a>
+            </p>
           </li>
           <li class="ice-cream-item">
             <img class="item-image" src="img/ice-cream11.jpg" width="267" height="267" alt="Сливочное с кусочками черного шоколада">
             <p class="item-price">
               <span>355 &#8381;</span>/кг
             </p>
-            <a class="item-title-link" href="#">Сливочное с кусочками черного шоколада</a>
-            <a class="button item-button" href="#">Быстрый просмотр</a>
+            <p class="ice-cream-wrapper">
+              <a class="item-title-link" href="#">Сливочное с кусочками черного шоколада</a>
+              <a class="button item-button" href="#">Быстрый просмотр</a>
+            </p>
           </li>
           <li class="ice-cream-item">
             <img class="item-image" src="img/ice-cream12.jpg" width="267" height="267" alt="Сливочное с мятным сиропом">
             <p class="item-price">
               <span>420 &#8381;</span>/кг
             </p>
-            <a class="item-title-link" href="#">Сливочное с мятным сиропом</a>
-            <a class="button item-button" href="#">Быстрый просмотр</a>
+            <p class="ice-cream-wrapper">
+              <a class="item-title-link" href="#">Сливочное с мятным сиропом</a>
+              <a class="button item-button" href="#">Быстрый просмотр</a>
+            </p>
           </li>
         </ul>
       </section>
@@ -302,19 +332,19 @@
             <span class="visually-hidden">назад</span>
           </a>
         </li>
-        <li class="active">
+        <li class="page active">
           <a href="#">1</a>
         </li>
-        <li>
+        <li class="page">
           <a href="#">2</a>
         </li>
-        <li>
+        <li class="page">
           <a href="#">3</a>
         </li>
-        <li>
+        <li class="page">
           <a href="#">4</a>
         </li>
-        <li>
+        <li class="page">
           <a href="#">5</a>
         </li>
         <li class="forward">
@@ -324,7 +354,7 @@
         </li>
       </ul>
     </main>
-    <footer class="main-footer">
+    <footer class="main-footer catalog-footer container">
         <ul class="social" aria-label="мы в социальных сетях">
           <li class="twitter">
             <a href="#">

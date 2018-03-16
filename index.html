@@ -8,18 +8,18 @@
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
-    <header class="main-header">
+    <header class="main-header container">
       <nav class="main-navigation">
         <a class="header-logo">
           <img class="logo-image" src="img/logo.svg" width="154" height="64" alt="Интернет-магазин мороженного Глейси">
         </a>
         <ul class="site-navigation">
-          <li>
+          <li class="site-navigation-item">
             <a class="site-navigation-link" href="#">Каталог</a>
             <ul class="item-navigation">
-              <li>
+              <li class="new-items">
                 <a href="#">
-                  <strong class="new-items">Новинки</strong>
+                  <strong>Новинки</strong>
                 </a>
               </li>
               <li>
@@ -36,31 +36,35 @@
               </li>
             </ul>
           </li>
-          <li>
+          <li class="site-navigation-item">
             <a class="site-navigation-link" href="#">Доставка и оплата</a>
           </li>
-          <li>
+          <li class="site-navigation-item">
             <a class="site-navigation-link" href="#">О компании</a>
           </li>
         </ul>
         <ul class="user-navigation">
           <li class="header-search">
-            <a class="user-navigation-link search-button" href="#" aria-label="Поиск"></a>
+            <a class="user-navigation-link search-button" href="#" aria-label="Поиск">Поиск</a>
             <form class="search-form" method="get" action="#">
               <label class="visually-hidden" for="main-search">Что ищем</label>
-              <input class="ashes-field" id="main-search" name="search" type="search" placeholder="Что ищем?">
+              <input class="entry-field" id="main-search" name="search" type="search" placeholder="Что ищем?">
             </form>
           </li>
           <li class="header-enter">
-            <a class="user-navigation-link" href="#">Вход</a>
+            <a class="user-navigation-link enter-button" href="#">Вход</a>
             <form class="enter-form" method="post" action="#">
               <label class="visually-hidden" for="main-enter-email">Введите адрес электронной почты</label>
-              <input class="ashes-field" id="main-enter-email" name="enter-email" type="email" placeholder="Электронная почта">
+              <input class="entry-field" id="main-enter-email" name="enter-email" type="email" placeholder="Электронная почта">
               <label class="visually-hidden" for="main-enter-password">Введите пароль</label>
-              <input class="ashes-field" id="main-enter-password" name="enter-password" type="password" placeholder="Пароль">
-              <button class="button" type="submit">Войти</button>
-              <a class="enter-form-link" href="#">Забыли пароль?</a>
-              <a class="enter-form-link" href="#">Новая регистрация</a>
+              <input class="entry-field" id="main-enter-password" name="enter-password" type="password" placeholder="Пароль">
+              <div class="enter-button-wrapper">
+                <button class="button" type="submit">Войти</button>
+                <p>
+                  <a class="enter-form-link" href="#">Забыли пароль?</a>
+                  <a class="enter-form-link" href="#">Новая регистрация</a>
+                </p>
+              </div>
             </form>
           </li>
           <li class="header-cart">
@@ -73,31 +77,35 @@
     </header>
     <main class="content">
       <h1 class="visually-hidden">Глейси - магазин мороженого</h1>
-      <section class="promo-actions">
-        <h2>Крем-брюле и пломбир с малиновым джемом</h2>
-        <img class="promo-image" src="img/slider-ice-cream1.png" width="1045" height="881" alt="крем-брюле и пломбир с малиновым джемом">
-        <a class="button promo-button" href="#">Давайте оба!</a>
-      </section>
-      <section class="promo-actions">
-        <h2>Шоколадный пломбир и лимонный сорбет</h2>
-        <img class="promo-image" src="img/slider-ice-cream2.png" width="1065" height="859" alt="шоколадный пломбир и лимонный сорбет">
-        <a class="button promo-button" href="#">Давайте оба!</a>
-      </section>
-      <section class="promo-actions">
-        <h2>Пломбир с помадкой и клубничный щербет</h2>
-        <img class="promo-image" src="img/slider-ice-cream1.png" width="1079" height="854" alt="пломбир с помадкой и клубничный щербет">
-        <a class="button promo-button" href="#">Давайте оба!</a>
-      </section>
-      <button class="slider-button" aria-label="Слайд 1"></button>
-      <button class="slider-button" aria-label="Слайд 2"></button>
-      <button class="slider-button" aria-label="Слайд 3"></button>
-      <section class="free-proposal">
+      <div class="promo-wrapper container">
+        <section class="promo-actions">
+          <h2>Крем-брюле и пломбир с малиновым джемом</h2>
+          <img class="promo-image" src="img/slider-ice-cream1.png" width="1045" height="881" alt="крем-брюле и пломбир с малиновым джемом">
+          <a class="button promo-button" href="#">Давайте оба!</a>
+        </section>
+        <section class="promo-actions container">
+          <h2>Шоколадный пломбир и лимонный сорбет</h2>
+          <img class="promo-image" src="img/slider-ice-cream2.png" width="1065" height="859" alt="шоколадный пломбир и лимонный сорбет">
+          <a class="button promo-button" href="#">Давайте оба!</a>
+        </section>
+        <section class="promo-actions container">
+          <h2>Пломбир с помадкой и клубничный щербет</h2>
+          <img class="promo-image" src="img/slider-ice-cream1.png" width="1079" height="854" alt="пломбир с помадкой и клубничный щербет">
+          <a class="button promo-button" href="#">Давайте оба!</a>
+        </section>
+        <div class="button-wrapper">
+          <button class="slider-button" aria-label="Слайд 1"></button>
+          <button class="slider-button" aria-label="Слайд 2"></button>
+          <button class="slider-button" aria-label="Слайд 3"></button>
+        </div>
+      </div>
+      <section class="free-proposal container">
         <h2 class="visually-hidden">Бесплатные предложения</h2>
         <ul class="free-proposal-list">
           <li class="free-proposal-item raspberries">
             <h3>Малинка даром!</h3>
             <p>При покупке 2 кг любого фруктового мороженного, добавим в ваш заказ банку любого малинового варенья бесплатно.</p>
-            <a class="button" href="#">хочу варенье!</a>
+            <a class="button" href="#">Хочу варенье!</a>
           </li>
           <li class="free-proposal-item chocolate">
             <h3>Шоколадки даром!</h3>
@@ -106,7 +114,7 @@
           </li>
         </ul>
       </section>
-      <section class="bestsellers">
+      <section class="bestsellers container">
         <h2 class="visually-hidden">Хиты продаж</h2>
         <ul class="bestsellers-list ice-cream-list">
           <li class="bestsellers-item ice-cream-item">
@@ -114,36 +122,44 @@
             <p class="item-price">
               <span>310 &#8381;</span>/кг
             </p>
-            <a class="item-title-link" href="#">сливочное с апельсиновым джемом и цитрусовой стружкой</a>
-            <a class="button item-button" href="#">Быстрый просмотр</a>
+            <p class="ice-cream-wrapper">
+              <a class="item-title-link" href="#">сливочное с апельсиновым джемом и цитрусовой стружкой</a>
+              <a class="button item-button" href="#">Быстрый просмотр</a>
+            </p>
           </li>
           <li class="bestsellers-item ice-cream-item">
             <img class="item-image" src="img/ice-cream2.jpg" width="267" height="267" alt="сливочно-кофейное с кусочками шоколада">
             <p class="item-price">
               <span>380 &#8381;</span>/кг
             </p>
-            <a class="item-title-link" href="#">сливочно-кофейное с кусочками шоколада</a>
-            <a class="button item-button" href="#">Быстрый просмотр</a>
+            <p class="ice-cream-wrapper">
+              <a class="item-title-link" href="#">сливочно-кофейное с кусочками шоколада</a>
+              <a class="button item-button" href="#">Быстрый просмотр</a>
+            </p>
           </li>
           <li class="bestsellers-item ice-cream-item">
             <img class="item-image" src="img/ice-cream3.jpg" width="267" height="267" alt="сливочно-клубничное с присыпкой из белого шоколада">
-            <p class="item-prce">
+            <p class="item-price">
               <span>355 &#8381;</span>/кг
             </p>
-            <a class="item-title-link" href="#">сливочно-клубничное с присыпкой из белого шоколада</a>
-            <a class="button item-button" href="#">Быстрый просмотр</a>
+            <p class="ice-cream-wrapper">
+              <a class="item-title-link" href="#">сливочно-клубничное с присыпкой из белого шоколада</a>
+              <a class="button item-button" href="#">Быстрый просмотр</a>
+            <p class="ice-cream-wrapper">
           </li>
           <li class="bestsellers-item ice-cream-item">
             <img class="item-image" src="img/ice-cream4.jpg" width="267" height="267" alt="сливочное крем-брюле с карамельной подливкой">
-            <p class="item-prce">
+            <p class="item-price">
               <span>415 &#8381;</span>/кг
             </p>
-            <a class="item-title-link" href="#">сливочное крем-брюле с карамельной подливкой</a>
-            <a class="button item-button" href="#">Быстрый просмотр</a>
+            <p class="ice-cream-wrapper">
+              <a class="item-title-link" href="#">сливочное крем-брюле с карамельной подливкой</a>
+              <a class="button item-button" href="#">Быстрый просмотр</a>
+            </p>
           </li>
         </ul>
       </section>
-      <section class="features">
+      <section class="features container">
         <h2 class="visually-hidden">Преимущества</h2>
         <p class="features-slogan">Магазин Глэйси — это онлайн- и офлайн-магазин по продаже мороженого собственного производства на развес</p>
         <ul class="features-list">
@@ -161,43 +177,50 @@
           </li>
         </ul>
       </section>
-      <article class="blog-news">
-        <h2>Новое в нашем блоге</h2>
-        <p>
-          <a href="#">10 способов сервировки фруктовых щербетов к столу</a>
-        </p>
-      </article>
-      <section class="newsletter-subscription">
-        <h2 class="visually-hidden">Подписка на рассылку</h2>
-        <div class="background">
+      <div class="blog-newsletter-wrapper container">
+        <article class="blog-news">
+          <h2>Новое в нашем блоге</h2>
           <p>
-            Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)
+            <a href="#">10 способов сервировки фруктовых щербетов к столу</a>
           </p>
-          <form class="subscription-form" method="post" action="#">
-            <label class="visually-hidden" for="subscription-email">Введите адрес электронной почты</label>
-            <input class="ashes-field" id="subscription-email" name="subscription-email" type="email" placeholder="Электронная почта">
-            <button class="button" type="submit">Отправить</button>
-          </form>
-        </div>
-      </section>
-      <section class="contacts">
+        </article>
+        <section class="newsletter-subscription">
+          <h2 class="visually-hidden">Подписка на рассылку</h2>
+          <div class="background">
+            <p>
+              Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)
+            </p>
+            <form class="subscription-form" method="post" action="#">
+              <label class="visually-hidden" for="subscription-email">Введите адрес электронной почты</label>
+              <input class="entry-field" id="subscription-email" name="subscription-email" type="email" placeholder="Электронная почта">
+              <button class="button" type="submit">Отправить</button>
+            </form>
+          </div>
+        </section>
+      </div>
+      <section class="contacts contacts-container">
         <h2 class="visually-hidden">Наши контакты</h2>
         <img class="map" src="img/map.jpg" width="1200" height="430" alt="ул. Большая Конюшенная 19/8, Санкт-Петербург">
         <div class="contacts-description">
           <p class="contacts-adress">
-            Адрес главного офиса и офлайн-магазина:
+            Адрес главного офиса
+            <br>
+            и офлайн-магазина:
+            <br>
             <strong>ул. Большая Конюшенная 19/8, Санкт-Петербург</strong>
           </p>
           <p class="contacts-phone">
             Для заказов по телефону
+            <br>
             <strong>8 812 450-25-25</strong>
+            <br>
             (с 10 до 20 ежедневно)
           </p>
           <a class="button" href="#">Форма обратной связи</a>
         </div>
       </section>
     </main>
-    <footer class="main-footer">
+    <footer class="main-footer container">
       <ul class="social" aria-label="Мы в социальных сетях">
         <li class="twitter">
           <a href="#">
@@ -253,11 +276,11 @@
       </button>
       <form class="feedback-form" method="post" action="#">
         <label class="visually-hidden" for="feedback-name">Введите ваше имя</label>
-        <input class="ashes-field" id="feedback-name" name="feedback-name" type="text" placeholder="Как вас зовут?">
+        <input class="entry-field" id="feedback-name" name="feedback-name" type="text" placeholder="Как вас зовут?">
         <label class="visually-hidden" for="feedback-email">Введите адрес электронной почты</label>
-        <input class="ashes-field" id="feedback-email" name="feedback-email" type="text" placeholder="Ваша почта для ответа?">
+        <input class="entry-field" id="feedback-email" name="feedback-email" type="text" placeholder="Ваша почта для ответа?">
         <label class="visually-hidden" for="feedback-text">Введите ваш вопрос</label>
-        <textarea class="ashes-field" id="feedback-text" name="feedback-text" placeholder="Напишите что-нибудь..."></textarea>
+        <textarea class="entry-field" id="feedback-text" name="feedback-text" placeholder="Напишите что-нибудь..."></textarea>
         <button class="button" type="submit">Отправить</button>
       </form>
     </section>
