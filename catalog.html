@@ -70,50 +70,49 @@
             </li>
             <li class="header-cart">
               <a class="user-navigation-link cart-link full-cart" href="#" aria-label="Корзина">2 товара</a>
+              <div class="cart-content">
+                <h2 class="visually-hidden">Содержание корзины</h2>
+                <table>
+                  <tr class="cart-item">
+                    <td class="delete-button">
+                      <button class="cart-button" type="button">
+                        <span class="visually-hidden">Удалить товар из корзины</span>
+                      </button>
+                    </td>
+                    <td class="item-image">
+                      <img class="cart-item-image" src="img/small-ice-cream1.png" width="33" height="33" alt="Пломбир с апельсиновым джемом">
+                    </td>
+                    <td class="item-title">Пломбир с апельсиновым джемом</td>
+                    <td class="item-weight-price">
+                      1,5 кг х<span> 200 руб</span>
+                    </td>
+                    <td class="item-total-price">300 руб.</td>
+                  </tr>
+                  <tr class="cart-item">
+                    <td class="delete-button">
+                      <button class="cart-button" type="button">
+                        <span class="visually-hidden">Удалить товар из корзины</span>
+                      </button>
+                    </td>
+                    <td class="item-image">
+                        <img class="cart-item-image" src="img/small-ice-cream2.png" width="33" height="33" alt="Клубничный пломбир с присыпкой из белого шоколада">
+                    </td>
+                    <td class="item-title">Клубничный пломбир с присыпкой из белого шоколада</td>
+                    <td class="item-weight-price">
+                      1,5 кг х<span> 300 руб</span>
+                    </td>
+                    <td class="item-total-price">450 руб.</td>
+                  </tr>
+                  <tr class="cart-total-price">
+                    <td colspan="5">Итого: 750 руб.</td>
+                  </tr>
+                </table>
+                <a class="button" href="#">Оформить заказ</a>
+              </div>
             </li>
           </ul>
         </nav>
-        <section class="cart-content">
-          <h2 class="visually-hidden">Содержание корзины</h2>
-          <table>
-            <tr class="cart-item">
-              <td class="delete-button">
-                <button class="cart-button" type="button">
-                  <span class="visually-hidden">Удалить товар из корзины</span>
-                </button>
-              </td>
-              <td class="item-image">
-                <img class="cart-item-image" src="img/small-ice-cream1.png" width="33" height="33" alt="Пломбир с апельсиновым джемом">
-              </td>
-              <td class="item-title">Пломбир с апельсиновым джемом</td>
-              <td class="item-weight-price">
-                1,5 кг х<span> 200 руб</span>
-              </td>
-              <td class="item-total-price">300 руб.</td>
-            </tr>
-            <tr class="cart-item">
-              <td class="delete-button">
-                <button class="cart-button" type="button">
-                  <span class="visually-hidden">Удалить товар из корзины</span>
-                </button>
-              </td>
-              <td class="item-image">
-                  <img class="cart-item-image" src="img/small-ice-cream2.png" width="33" height="33" alt="Клубничный пломбир с присыпкой
-                  из белого шоколада">
-              </td>
-              <td class="item-title">Клубничный пломбир с присыпкой из белого шоколада</td>
-              <td class="item-weight-price">
-                1,5 кг х<span> 300 руб</span>
-              </td>
-              <td class="item-total-price">450 руб.</td>
-            </tr>
-            <tr class="cart-total-price">
-              <td colspan="5">Итого: 750 руб.</td>
-            </tr>
-          </table>
-          <a class="button" href="#">Оформить заказ</a>
-        </section>
-        <p class="work-schedule" aria-label="часы работы">с 10 до 20, ежедневно</p>
+        <p class="work-schedule" aria-label="часы работы">С 10 до 20, ежедневно</p>
         <p class="phone-number" aria-label="телефон">8 812 450-25-25</p>
       </header>
       <main class="catalog-main content">
@@ -328,28 +327,28 @@
           </ul>
         </section>
         <ul class="pagination" aria-label="преход на другую страницу">
-          <li class="back">
-            <a href="#">
+          <li>
+            <a class="back" href="#">
               <span class="visually-hidden">назад</span>
             </a>
           </li>
-          <li class="page active">
-            <a href="#">1</a>
+          <li>
+            <a class="page active" href="#">1</a>
           </li>
-          <li class="page">
-            <a href="#">2</a>
+          <li>
+            <a class="page" href="#">2</a>
           </li>
-          <li class="page">
-            <a href="#">3</a>
+          <li>
+            <a class="page" href="#">3</a>
           </li>
-          <li class="page">
-            <a href="#">4</a>
+          <li>
+            <a class="page" href="#">4</a>
           </li>
-          <li class="page">
-            <a href="#">5</a>
+          <li>
+            <a class="page" href="#">5</a>
           </li>
-          <li class="forward">
-            <a href="#">
+          <li>
+            <a class="forward" href="#">
               <span class="visually-hidden">вперед</span>
             </a>
           </li>
@@ -357,36 +356,36 @@
       </main>
       <footer class="main-footer catalog-footer">
           <ul class="social" aria-label="мы в социальных сетях">
-            <li class="twitter">
-              <a href="#">
+            <li>
+              <a class="social-link twitter" href="#">
                 <span class="visually-hidden">Твиттер</span>
               </a>
             </li>
-            <li class="instagramm">
-              <a href="#">
+            <li>
+              <a class="social-link instagramm" href="#">
                 <span class="visually-hidden">Инстаграмм</span>
               </a>
             </li>
-            <li class="facebook">
-              <a href="#">
+            <li>
+              <a class="social-link facebook" href="#">
                 <span class="visually-hidden">Фейсбук</span>
               </a>
             </li>
-            <li class="vk">
-              <a href="#">
+            <li>
+              <a class="social-link vk" href="#">
                 <span class="visually-hidden">Вконтакте</span>
               </a>
-            </li>
+          </li>
           </ul>
           <ul class="for-constractors-menu">
-            <li class="heart-picture">
+            <li>
               <a class="constractors" href="#">Для поставщиков</a>
             </li>
             <li>
-              <a href="#">О производстве</a>
+              <a href="#">Наши документы</a>
             </li>
             <li>
-              <a href="#">Наши документы</a>
+              <a href="#">О производстве</a>
             </li>
             <li>
               <a href="#">Экологические стандарты</a>
