@@ -181,12 +181,16 @@ a {
   border-radius: 4px;
   box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
   opacity: 0;
+  transform: scale(0.1);
 }
 .site-navigation-link:hover + .item-navigation,
 .site-navigation-link:focus + .item-navigation,
-.site-navigation-link:active + .item-navigation {
+.site-navigation-link:active + .item-navigation,
+.site-navigation-item:hover .item-navigation,
+.item-navigation:hover {
   z-index: 2;
   opacity: 1;
+  transform: scale(1);
 }
 .item-navigation li {
   margin: 0;
@@ -260,6 +264,7 @@ a {
   border-radius: 4px 5px;
   box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
   opacity: 0;
+  transform: scale(0.1);
 }
 .search-form input {
   width: 310px;
@@ -268,9 +273,11 @@ a {
 }
 .search-button:hover + .search-form,
 .search-button:active + .search-form,
-.search-button:focus + .search-form {
+.search-button:focus + .search-form,
+.header-search:hover .search-form {
   opacity: 1;
   z-index: 2;
+  transform: scale(1);
 }
 .header-enter {
   position: relative;
@@ -306,12 +313,15 @@ a {
   border-radius: 5px;
   box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
   opacity: 0;
+  transform: scale(0.1);
 }
 .enter-button:hover + .enter-form,
 .enter-button:focus + .enter-form,
-.enter-button:active + .enter-form{
+.enter-button:active + .enter-form,
+.header-enter:hover .enter-form {
   opacity: 1;
   z-index: 2;
+  transform: scale(1);
 }
 .enter-form input {
   width: 240px;
@@ -390,7 +400,7 @@ a {
   position: absolute;
   top: 38px;
   right: 0;
-  display: none;
+  z-index: -1;
   width: 540px;
   padding: 18px 15px;
   font-size: 13px;
@@ -398,12 +408,17 @@ a {
   color: #323232;
   background-color: #f8f7f4;
   border-radius: 4px;
-  box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4)
+  box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  transform: scale(0.1);
 }
 .full-cart:hover + .cart-content,
 .full-cart:focus + .cart-content,
-.full-cart:active + .cart-content {
-  display: block;
+.full-cart:active + .cart-content,
+.header-cart:hover .cart-content {
+  z-index: 2;
+  opacity: 1;
+  transform: scale(1);
 }
 .cart-content table {
   border-collapse: collapse;
