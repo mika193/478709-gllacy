@@ -15,6 +15,7 @@ body {
   background-color: #849d8f;
 }
 .catalog-body {
+  background-color: #849d8f;
   background-image: url(../img/illumination.png);
   background-size: cover;
 }
@@ -732,7 +733,6 @@ a {
   position: relative;
   margin-bottom: 22px;
   width: 487px;
-
 }
 .features-item:nth-child(2n) {
   width: 472px;
@@ -938,7 +938,6 @@ a {
 .facebook:hover {
   background-image: url(../img/facebook-hover.svg);
 }
-
 .facebook:active {
   background-image: url(../img/facebook-active.svg);
 }
@@ -1255,30 +1254,32 @@ a {
 .fat-list-button::before {
   content: "";
   position: absolute;
-  top: -1px;
-  left: -32px;
-  width: 22px;
-  height: 22px;
-  background-image: url(../img/radio-off.svg);
-  background-repeat: no-repeat;
+  top: 5px;
+  left: -25px;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background-color: #aabcb2;
+  box-shadow: 0 0 0 3px #aabcb2, 0 0 0 7px rgba(255, 255, 255, 0.8);
 }
 .fat-list-button:hover::before {
-  background-image: url(../img/radio-off-hover.svg);
+  box-shadow: 0 0 0 3px #aabcb2, 0 0 0 7px #ffffff;
 }
 .fat-list-radio:focus + .fat-list-button::before {
   outline: rgba(255, 255, 255, 0.5) dashed 1px;
+  outline-offset: 9px;
 }
 .fat-list-radio:checked + .fat-list-button::before {
-  background-image: url(../img/radio-on.svg);
+  background-color:  rgba(255, 255, 255, 0.8);
 }
 .fat-list-radio:checked + .fat-list-button:hover::before {
-  background-image: url(../img/radio-on-hover.svg);
+  background-color: #ffffff;
 }
 .fat-list-radio:disabled + .fat-list-button::before {
-  background-image: url(../img/radio-off-disabled.svg);
+  box-shadow: 0 0 0 3px #aabcb2, 0 0 0 7px rgba(255, 255, 255, 0.4);
 }
 .fat-list-radio:disabled:checked + .fat-list-button::before {
-  background-image: url(../img/radio-on-disabled.svg);
+  background-color: rgba(255, 255, 255, 0.4);
 }
 .filler {
   width: 702px;
@@ -1341,6 +1342,7 @@ a {
 .filters-button:active {
   color: #323232;
   background-color: #ededed;
+  box-shadow: inset 0px 2px 1px 0px rgba(105, 105, 105, 0.004);
   border: none;
 }
 .pagination {
@@ -1410,5 +1412,7 @@ a {
     width: 1146px;
     margin-left: 27px;
   }
-
+  .fat-list-radio:focus + .fat-list-button::before {
+    outline: #0c456a solid 1px;
+  }
 }
