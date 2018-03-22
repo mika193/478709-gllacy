@@ -1044,7 +1044,7 @@ a {
   padding: 20px 25px 27px;
   background-color: #f8f7f4;
   border-radius: 9px;
-  transform: translateX(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 .modal-overlay {
   position: fixed;
@@ -1129,7 +1129,8 @@ a {
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 .breadcrumbs-link:hover,
-.breadcrumbs-link:active {
+.breadcrumbs-link:active,
+.breadcrumbs-link:focus {
   color: #ffbc9e;
   border-bottom-color: rgba(255, 188, 158, 0.3);
 }
