@@ -5,6 +5,7 @@ html {
   box-sizing: inherit;
 }
 body {
+  min-width: 1200px;
   margin: 0;
   padding: 0;
   font-weight: 400;
@@ -29,9 +30,14 @@ a {
 .visually-hidden {
   position: absolute;
   clip: rect(0 0 0 0);
+  clip-path: inset(100%);
   width: 1px;
   height: 1px;
   margin: -1px;
+  padding: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  border: 0;
 }
 .button {
   font-weight: 700;
@@ -95,8 +101,12 @@ a {
 .main-header {
   position: relative;
   z-index: 2;
+  margin-bottom: 39px;
   padding: 0 27px;
   text-align: right;
+}
+.catalog-main-header {
+  margin-bottom: 21px;
 }
 .main-navigation {
   display: flex;
@@ -206,6 +216,7 @@ a {
   padding-bottom: 14px;
   font-weight: 700;
   border-bottom: 1px solid rgba(53, 53, 53, 0.2);
+  border-radius: 4px 4px 0 0;
 }
 .item-navigation a:hover,
 .item-navigation a:focus {
@@ -479,8 +490,14 @@ a {
   vertical-align: middle;
   box-shadow: 0 1px 2px 0 #ac1000;
 }
+.contact-information {
+  position: absolute;
+  bottom: -42px;
+  right: 28px;
+}
 .work-schedule {
   margin: 0;
+  margin-bottom: 5px;
   font-weight: 700;
   font-size: 14px;
   line-height: 16px;
@@ -525,7 +542,7 @@ a {
 }
 .promo-image {
   position: absolute;
-  top: -117px;
+  top: -116px;
   left: 50px;
   z-index: 1;
 }
@@ -677,17 +694,17 @@ a {
 }
 .item-price span {
   position: relative;
+  padding-right: 36px;
   font-size: 45px;
-  word-spacing: -9px;
 }
 .item-price span::after {
   content: "";
   position: absolute;
-  bottom: 16px;
-  right: 7px;
-  width: 23px;
-  height: 6px;
-  background-color: #ffffff;
+  top: 10px;
+  right: 5px;
+  width: 31px;
+  height: 36px;
+  background-image: url(../img/icon-ruble.svg)
 }
 .ice-cream-wrapper {
   position: relative;
@@ -1023,6 +1040,11 @@ a {
 .copyright {
   width: 190px;
 }
+.academy-logo {
+  display: block;
+  width: 108px;
+  height: 39px;
+}
 .academy-link {
   color: #fefefe;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
@@ -1034,6 +1056,7 @@ a {
 }
 .copyright p {
   margin: 0;
+  margin-top: 3px;
   padding: 0;
   font-size: 12px;
   color: #fefefe;
@@ -1112,12 +1135,13 @@ a {
   padding-top: 2px;
 }
 .breadcrumbs {
-  position: absolute;
+  /*position: absolute;
   top: -17px;
-  left: 27px;
+  left: 27px;*/
   display: flex;
   width: 900px;
   margin: 0;
+  margin-bottom: 4px;
   padding: 0;
   list-style: none;
 }
@@ -1255,31 +1279,34 @@ a {
   padding-top: 16px;
 }
 .price-range {
+  position: relative;
   width: 176px;
   padding-left: 25px;
   border-bottom: 4px solid rgba(248, 247, 244, 0.5);
 }
-.price-range-fat-line {
-  position: relative;
-  width: 98px;
-  margin-bottom: -4px;
-  border-bottom: 4px solid #f8f7f1;
-}
-.price-range-fat-line::before,
-.price-range-fat-line::after {
+.price-range::before {
   content: "";
+  position: absolute;
+  width: 98px;
+  height: 4px;
+  background-color: #f8f7f1
+}
+.min-price-button,
+.max-price-button {
   position: absolute;
   top: -9px;
   width: 20px;
   height: 23px;
+  background-color: transparent;
   background-image: url(../img/filter-button.svg);
+  border: none;
   cursor: pointer;
 }
-.price-range-fat-line::before {
-  left: -9px;
+.min-price-button {
+  left: 13px;
 }
-.price-range-fat-line::after {
-  right: -9px;
+.max-price-button {
+  right: 43px;
 }
 .fat {
   width: 415px;
@@ -1449,6 +1476,13 @@ a {
   .price-value {
     top: -25px;
   }
+  .button-wrapper {
+    left: -2px;
+    bottom: 25px;
+  }
+  .slider-button {
+    height: 22px;
+  }
 }
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
   .for-ie{
@@ -1491,7 +1525,15 @@ a {
     justify-content: flex-end;
     margin-left: 15px;
   }
-  /*.filters fieldset {
-    margin-left: 10px;
-  }*/
+  .slider-button {
+    height: 22px;
+  }
+  .breadcrumbs {
+    margin-top: 21px;
+  }
+}
+@supports (-ms-ime-align:auto) {
+  .filler-list {
+    padding-left: 11px;
+  }
 }

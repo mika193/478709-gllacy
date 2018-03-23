@@ -2,6 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no">
     <title>HTML Academy: Глейси</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
@@ -73,8 +74,10 @@
             </li>
           </ul>
         </nav>
-        <p class="work-schedule" aria-label="часы работы">С 10 до 20, ежедневно</p>
-        <p class="phone-number" aria-label="телефон">8 812 450-25-25</p>
+        <div class="contact-information">
+          <p class="work-schedule">С 10 до 20, ежедневно</p>
+          <p class="phone-number">8 812 450-25-25</p>
+        </div>
       </header>
       <main class="content">
         <h1 class="visually-hidden">Глейси - магазин мороженого</h1>
@@ -95,9 +98,9 @@
             <a class="button promo-button" href="#">Давайте оба!</a>
           </section>
           <div class="button-wrapper">
-            <button class="slider-button active" aria-label="Слайд 1"></button>
-            <button class="slider-button" aria-label="Слайд 2"></button>
-            <button class="slider-button" aria-label="Слайд 3"></button>
+            <button class="slider-button active" type="button" aria-label="Слайд 1"></button>
+            <button class="slider-button" type="button" aria-label="Слайд 2"></button>
+            <button class="slider-button" type="button" aria-label="Слайд 3"></button>
           </div>
         </div>
         <section class="free-proposal for-ie">
@@ -121,7 +124,7 @@
             <li class="bestsellers-item ice-cream-item">
               <img class="item-image" src="img/ice-cream1.jpg" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
               <p class="item-price">
-                <span>310 &#8381;</span>/кг
+                <span>310</span>/кг
               </p>
               <p class="ice-cream-wrapper">
                 <a class="item-title-link" href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
@@ -131,7 +134,7 @@
             <li class="bestsellers-item ice-cream-item">
               <img class="item-image" src="img/ice-cream2.jpg" width="267" height="267" alt="сливочно-кофейное с кусочками шоколада">
               <p class="item-price">
-                <span>380 &#8381;</span>/кг
+                <span>380</span>/кг
               </p>
               <p class="ice-cream-wrapper">
                 <a class="item-title-link" href="#">Сливочно-кофейное с кусочками шоколада</a>
@@ -141,7 +144,7 @@
             <li class="bestsellers-item ice-cream-item">
               <img class="item-image" src="img/ice-cream3.jpg" width="267" height="267" alt="сливочно-клубничное с присыпкой из белого шоколада">
               <p class="item-price">
-                <span>355 &#8381;</span>/кг
+                <span>355</span>/кг
               </p>
               <p class="ice-cream-wrapper">
                 <a class="item-title-link" href="#">Сливочно-клубничное с присыпкой из белого шоколада</a>
@@ -151,7 +154,7 @@
             <li class="bestsellers-item ice-cream-item">
               <img class="item-image" src="img/ice-cream4.jpg" width="267" height="267" alt="сливочное крем-брюле с карамельной подливкой">
               <p class="item-price">
-                <span>415 &#8381;</span>/кг
+                <span>415</span>/кг
               </p>
               <p class="ice-cream-wrapper">
                 <a class="item-title-link" href="#">Сливочное крем-брюле с карамельной подливкой</a>
@@ -254,7 +257,7 @@
           </li>
         </ul>
         <div class="copyright">
-          <a href="https://htmlacademy.ru/intensive/htmlcss">
+          <a class="academy-logo" href="https://htmlacademy.ru/intensive/htmlcss">
             <img src="img/logo-htmlacademy-small.svg" width="108" height="39" alt="Логотип HTML-Academy">
           </a>
           <p>
