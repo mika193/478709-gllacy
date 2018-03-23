@@ -564,10 +564,10 @@ a {
 .slider-button {
   width: 20px;
   height: 20px;
+  margin-right: 5px;
   background-color: transparent;
   border: 3px solid #ffffff;
   border-radius: 50%;
-  margin-right: 5px;
 }
 .button-wrapper .active {
   background-color: #ffffff;
@@ -643,13 +643,10 @@ a {
   position: relative;
   width: 266px;
   margin-right: 27px;
-  padding: 209px 0 40px;
+  padding: 209px 0 39px;
 }
 .ice-cream-item:nth-child(4n) {
   margin-right: 0;
-}
-.bestsellers-item {
-  padding-bottom: 39px;
 }
 .bestsellers-item::before {
   content: "";
@@ -1004,8 +1001,8 @@ a {
   width: 340px;
   margin: 0;
   padding: 0;
-  padding-left: 16px;
   padding-top: 15px;
+  padding-left: 16px;
   list-style: none;
   font-size: 13px;
 }
@@ -1135,9 +1132,6 @@ a {
   padding-top: 2px;
 }
 .breadcrumbs {
-  /*position: absolute;
-  top: -17px;
-  left: 27px;*/
   display: flex;
   width: 900px;
   margin: 0;
@@ -1371,9 +1365,9 @@ a {
   border-radius: 17px;
 }
 .filler-list li {
-  margin-left: 36px;
+  margin-right: 17px;
   margin-bottom: 7px;
-  margin-right: 17px
+  margin-left: 36px;
 }
 .filler-list-button {position: relative;}
 .filler-list-button::before {
@@ -1433,7 +1427,7 @@ a {
   justify-content: flex-end;
   flex-wrap: wrap;
   margin: 0;
-  margin-top: 39px;
+  margin-top: 40px;
   padding: 0;
   padding-bottom: 27px;
   font-weight: 500;
@@ -1486,20 +1480,19 @@ a {
 }
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
   .for-ie{
-    margin-left: 27px;
     margin-right: 27px;
+    margin-left: 27px;
   }
   .for-ie-special {
-    margin-left: 0;
     margin-right: 0;
+    margin-left: 0;
   }
-  /*.promo-actions {border-top: 1px solid transparent;}*/
   .promo-actions h2 {
     margin-top: 260px;
   }
   .content {
-    padding-left: 0;
     padding-right: 0;
+    padding-left: 0;
   }
   .catalog-main h1 {
     width: 1146px;
@@ -1509,8 +1502,8 @@ a {
     outline: #0c456a solid 1px;
   }
   .button-wrapper {
-    left: -3px;
     bottom: 23px;
+    left: -3px;
   }
   .catalog-body .main-header {
     margin-bottom: 3px;
@@ -1529,11 +1522,21 @@ a {
     height: 22px;
   }
   .breadcrumbs {
-    margin-top: 21px;
+    margin-top: 20px;
   }
 }
 @supports (-ms-ime-align:auto) {
   .filler-list {
     padding-left: 11px;
+  }
+  .button-wrapper {
+    bottom: 23px;
+    left: 1px;
+  }
+  .ice-cream-item {
+    padding-bottom: 38px;
+  }
+  .pagination {
+    margin-top: 42px;
   }
 }
