@@ -392,9 +392,9 @@ a {
   color: #323232;
   background-color: #f8f7f4;
 }
-.header-cart .full-cart:before,
-.header-cart .full-cart:hover:before,
-.header-cart .full-cart:focus:before {
+.header-cart .full-cart::before,
+.header-cart .full-cart:hover::before,
+.header-cart .full-cart:focus::before {
   background-image: url(../img/full-cart.svg);
 }
 .cart-content {
@@ -504,6 +504,7 @@ a {
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
+  padding-top: 15px;
   padding-bottom: 5px;
   min-height: 495px;
 }
@@ -560,6 +561,7 @@ a {
 .free-proposal-list {
   display: flex;
   justify-content: space-between;
+  align-items: flex-start;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -782,6 +784,7 @@ a {
 .blog-newsletter-wrapper {
   display: flex;
   justify-content: space-between;
+  align-items: flex-start;
   margin-bottom: 38px;
 }
 .blog-news {
@@ -832,7 +835,7 @@ a {
   border-radius: 11px;
 }
 .background {
-  padding: 28px 15px 37px 22px;
+  padding: 28px 15px 32px 22px;
   background-color: #f8f7f4;
   border-radius: 9px;
 }
@@ -846,6 +849,7 @@ a {
 .newsletter-subscription input {
   width: 368px;
   margin-right: 10px;
+  margin-bottom: 5px;
   padding: 9px 13px;
   font-size: 16px;
   border-radius: 3px;
@@ -1151,19 +1155,22 @@ a {
 .filters {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  width: 859px;
-  margin-bottom: 40px;
+  width: 870px;
+  margin-bottom: 27px;
+  margin-left: -11px;
   padding: 0;
   font-weight: 500;
 }
 .filters fieldset {
+  margin-bottom: 13px;
+  margin-left: 11px;
   padding: 0;
   border: none;
 }
 .sorting-filter-wrapper {
   width: 195px;
   margin: 0;
+  margin-left: 11px;
 }
 .sorting-filter-label {
   position: relative;
@@ -1214,7 +1221,7 @@ a {
 .filters legend {
   margin-bottom: 8px;
   padding-top: 1px;
-  padding-left: 15px;
+  padding-left: 17px;
   font-size: 14px;
   line-height: 16px;
 }
@@ -1244,12 +1251,12 @@ a {
   height: 36px;
   background-color: rgba(255, 255, 255, 0.2);
   border-radius: 17px;
-  padding-left: 21px;
+  padding-left: 22px;
   padding-top: 16px;
 }
 .price-range {
   width: 176px;
-  padding-left: 24px;
+  padding-left: 25px;
   border-bottom: 4px solid rgba(248, 247, 244, 0.5);
 }
 .price-range-fat-line {
@@ -1279,12 +1286,17 @@ a {
 }
 .fat-list {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
   margin: 0;
-  padding: 8px 19px 9px 45px;
+  padding: 8px 2px 2px 12px;
   background-color: rgba(255, 255, 255, 0.2);
   list-style: none;
   border-radius: 17px;
+}
+.fat-list li {
+  margin-right: 14px;
+  margin-bottom: 7px;
+  margin-left: 35px;
 }
 .fat-list-button {
   position: relative;
@@ -1293,7 +1305,7 @@ a {
   content: "";
   position: absolute;
   top: 5px;
-  left: -25px;
+  left: -24px;
   width: 9px;
   height: 9px;
   border-radius: 50%;
@@ -1321,16 +1333,20 @@ a {
 }
 .filler {
   width: 702px;
-  margin: 13px 0 0;
 }
 .filler-list {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
   margin: 0;
-  padding: 8px 18px 9px 45px;
+  padding: 8px 1px 2px 12px;
   list-style: none;
   background-color: rgba(255, 255, 255, 0.2);
   border-radius: 17px;
+}
+.filler-list li {
+  margin-left: 36px;
+  margin-bottom: 7px;
+  margin-right: 17px
 }
 .filler-list-button {position: relative;}
 .filler-list-button::before {
@@ -1363,7 +1379,9 @@ a {
   background-image: url(../img/checkbox-on-disabled.svg);
 }
 .filters-button {
-  align-self: flex-end;
+  align-self: flex-start;
+  margin-top: 24px;
+  margin-left: 11px;
   padding: 7px 27px;
   font-weight: inherit;
   font-size: inherit;
@@ -1441,9 +1459,9 @@ a {
     margin-left: 0;
     margin-right: 0;
   }
-  .promo-actions {border-top: 1px solid transparent;}
+  /*.promo-actions {border-top: 1px solid transparent;}*/
   .promo-actions h2 {
-    margin-top: 270px;
+    margin-top: 260px;
   }
   .content {
     padding-left: 0;
@@ -1466,4 +1484,14 @@ a {
   .sorting-filter-wrapper {
     margin-left: -8px;
   }
+  .filler-list {
+    padding-left: 11px;
+  }
+  .filters {
+    justify-content: flex-end;
+    margin-left: 15px;
+  }
+  /*.filters fieldset {
+    margin-left: 10px;
+  }*/
 }
