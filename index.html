@@ -8,7 +8,7 @@
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
   </head>
-  <body>
+  <body class="index-body first-slide">
     <div class="site-container">
       <header class="main-header">
         <nav class="main-navigation">
@@ -82,7 +82,7 @@
       <main class="content">
         <h1 class="visually-hidden">Глейси - магазин мороженого</h1>
         <div class="promo-wrapper for-ie">
-          <section class="promo-actions">
+          <section class="promo-actions active">
             <h2>Крем-брюле и пломбир с малиновым джемом</h2>
             <img class="promo-image" src="img/slider-ice-cream1.png" width="1045" height="881" alt="крем-брюле и пломбир с малиновым джемом">
             <a class="button promo-button" href="#">Давайте оба!</a>
@@ -94,7 +94,7 @@
           </section>
           <section class="promo-actions">
             <h2>Пломбир с помадкой и клубничный щербет</h2>
-            <img class="promo-image" src="img/slider-ice-cream1.png" width="1079" height="854" alt="пломбир с помадкой и клубничный щербет">
+            <img class="promo-image" src="img/slider-ice-cream3.png" width="1079" height="854" alt="пломбир с помадкой и клубничный щербет">
             <a class="button promo-button" href="#">Давайте оба!</a>
           </section>
           <div class="button-wrapper">
@@ -202,23 +202,47 @@
             </div>
           </section>
         </div>
-        <section class="contacts contacts-container for-ie-special">
-          <h2 class="visually-hidden">Наши контакты</h2>
-          <img class="map" src="img/map.jpg" width="1200" height="430" alt="ул. Большая Конюшенная 19/8, Санкт-Петербург">
-          <div class="contacts-description">
-            <div class="contacts-adress">
-              <p class="narrow-title">Адрес главного офиса и офлайн-магазина:</p>
-              <p class="adress">ул. Большая Конюшенная 19/8, Санкт-Петербург</p>
-            </div>
-            <div class="contacts-phone">
-              <p>Для заказов по телефону</p>
-              <p class="phone-number">8 812 450-25-25</p>
-              <p>(с 10 до 20 ежедневно)</p>
-            </div>
-            <a class="button" href="#">Форма обратной связи</a>
-          </div>
-        </section>
       </main>
+    </div>
+    <section class="contacts contacts-container for-ie-special">
+      <h2 class="visually-hidden">Наши контакты</h2>
+      <div class="map-container">
+        <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A491de4687ba1af00c2b3b77942afad408da0a2056578b4bf6c9ee30229cac7ac&amp;source=constructor" width="100%" height="430"></iframe>
+        <img class="map-image" src="img/map.jpg" width="1200" height="430" alt="ул. Большая Конюшенная 19/8, Санкт-Петербург">
+      </div>
+      <div class="contacts-wrapper">
+        <div class="contacts-description">
+          <div class="contacts-adress">
+            <p class="narrow-title">Адрес главного офиса и офлайн-магазина:</p>
+            <p class="adress">ул. Большая Конюшенная 19/8, Санкт-Петербург</p>
+          </div>
+          <div class="contacts-phone">
+            <p>Для заказов по телефону</p>
+            <p class="phone-number">8 812 450-25-25</p>
+            <p>(с 10 до 20 ежедневно)</p>
+          </div>
+          <a class="button feedback-button" href="#">Форма обратной связи</a>
+        </div>
+      </div>
+    </section>
+    <section class="modal modal-feedback">
+      <h2 class="visually-hidden">Форма обратной связи</h2>
+      <p>Мы обязательно вам ответим!</p>
+      <button class="modal-close">
+        <span class="visually-hidden">Закрыть форму</span>
+      </button>
+      <form class="feedback-form" method="post" action="#">
+        <label class="visually-hidden" for="feedback-name">Введите ваше имя</label>
+        <input class="entry-field" id="feedback-name" name="feedback-name" type="text" placeholder="Как вас зовут?">
+        <label class="visually-hidden" for="feedback-email">Введите адрес электронной почты</label>
+        <input class="entry-field" id="feedback-email" name="feedback-email" type="text" placeholder="Ваша почта для ответа?">
+        <label class="visually-hidden" for="feedback-text">Введите ваш вопрос</label>
+        <textarea class="entry-field" id="feedback-text" name="feedback-text" placeholder="Напишите что-нибудь..."></textarea>
+        <button class="button" type="submit">Отправить</button>
+      </form>
+    </section>
+    <div class="modal-overlay"></div>
+    <div class="site-container">
       <footer class="main-footer">
         <ul class="social" aria-label="Мы в социальных сетях">
           <li>
@@ -268,22 +292,6 @@
         </div>
       </footer>
     </div>
-    <section class="modal modal-feedback">
-      <h2 class="visually-hidden">Форма обратной связи</h2>
-      <p>Мы обязательно вам ответим!</p>
-      <button class="modal-close">
-        <span class="visually-hidden">Закрыть форму</span>
-      </button>
-      <form class="feedback-form" method="post" action="#">
-        <label class="visually-hidden" for="feedback-name">Введите ваше имя</label>
-        <input class="entry-field" id="feedback-name" name="feedback-name" type="text" placeholder="Как вас зовут?">
-        <label class="visually-hidden" for="feedback-email">Введите адрес электронной почты</label>
-        <input class="entry-field" id="feedback-email" name="feedback-email" type="text" placeholder="Ваша почта для ответа?">
-        <label class="visually-hidden" for="feedback-text">Введите ваш вопрос</label>
-        <textarea class="entry-field" id="feedback-text" name="feedback-text" placeholder="Напишите что-нибудь..."></textarea>
-        <button class="button" type="submit">Отправить</button>
-      </form>
-    </section>
-    <div class="modal-overlay"></div>
+    <script src="js/script.js"></script>
   </body>
 </html>
