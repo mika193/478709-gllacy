@@ -97,9 +97,9 @@ if(cartOrderButton) {
 
 /*Subscription-form*/
 var letterForm = document.querySelector('.subscription-form');
-var letterField = letterForm.querySelector('input');
 
 if(letterForm) {
+  var letterField = letterForm.querySelector('input');
   letterForm.addEventListener("submit", function (evt) {
     if (!letterField.value) {
       evt.preventDefault();
@@ -167,9 +167,6 @@ var feedbackModal = document.querySelector('.modal-feedback');
 var feedbackOverlay = document.querySelector('.modal-overlay');
 var feedbackClose = document.querySelector('.modal-close');
 var modalForm = document.querySelector('.feedback-form');
-var modalLogin = modalForm.querySelector('[name = feedback-name]')
-var modalPassword = modalForm.querySelector('[name = feedback-email]')
-var modalText = modalForm.querySelector('[name = feedback-text]')
 
 if (feedback) {
   feedback.onclick = function(evt) {
@@ -190,6 +187,9 @@ if (feedback) {
   }
 }
 if (modalForm) {
+  var modalLogin = modalForm.querySelector('[name = feedback-name]');
+  var modalPassword = modalForm.querySelector('[name = feedback-email]');
+  var modalText = modalForm.querySelector('[name = feedback-text]');
   modalForm.addEventListener("submit", function (evt) {
     if (!modalLogin.value || !modalPassword.value || !modalText.value) {
       evt.preventDefault();
