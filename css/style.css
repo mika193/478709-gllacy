@@ -378,6 +378,7 @@ a {
 }
 .enter-form-link {
   position: relative;
+  font-weight: 400;
   font-size: 13px;
   line-height: 24px;
   color: #323232;
@@ -558,7 +559,7 @@ a {
   margin-bottom: 30px;
   font-weight: 700;
   font-size: 60px;
-  line-height: 61px;
+  line-height: 60px;
   text-align: center;
 }
 .promo-image {
@@ -589,7 +590,7 @@ a {
   height: 20px;
   margin-right: 5px;
   background-color: transparent;
-  border: 3px solid #ffffff;
+  border: 2px solid #ffffff;
   border-radius: 50%;
 }
 .button-wrapper .active {
@@ -915,6 +916,7 @@ a {
 .contacts-container {
   position: relative;
   width: 100%;
+  overflow: hidden;
 }
 .contacts-container iframe {
   position: relative;
@@ -931,7 +933,7 @@ a {
 }
 .contacts-description {
   position: absolute;
-  bottom: 68px;
+  bottom: 66px;
   right: 28px;
   z-index: 3;
   width: 302px;
@@ -965,6 +967,9 @@ a {
 .contacts-phone .phone-number {
   margin-top: 4px;
   margin-bottom: 3px;
+  line-height: 22px;
+}
+.contacts-phone .work-time {
   line-height: 22px;
 }
 .contacts-description .button {
@@ -1296,7 +1301,7 @@ a {
 }
 .sorting-filter option {
   font-size: 14px;
-  line-height: 14px;
+  line-height: 16px;
   color: #323232;
   background-color: #ffffff;
 }
@@ -1542,9 +1547,6 @@ a {
     left: -2px;
     bottom: 25px;
   }
-  .slider-button {
-    height: 22px;
-  }
 }
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
   .for-ie{
@@ -1585,9 +1587,6 @@ a {
   .filters {
     justify-content: flex-end;
     margin-left: 15px;
-  }
-  .slider-button {
-    height: 22px;
   }
   .breadcrumbs {
     margin-top: 20px;
