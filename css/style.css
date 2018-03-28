@@ -372,7 +372,7 @@ a {
   display: flex;
   justify-content: space-between;
 }
-.enter-form p {
+.enter-form .enter-link-wrapper {
   width: 119px;
   margin: 0;
 }
@@ -592,6 +592,10 @@ a {
   background-color: transparent;
   border: 2px solid #ffffff;
   border-radius: 50%;
+}
+.slider-button:hover,
+.slider-button:focus {
+  background-color: rgba(255, 255, 255, 0.4);
 }
 .button-wrapper .active {
   background-color: #ffffff;
@@ -1369,6 +1373,12 @@ a {
   border: none;
   cursor: pointer;
 }
+.min-price-button:hover,
+.max-price-button:hover,
+.min-price-button:focus,
+.max-price-button:focus  {
+  transform: scale(1.1);
+}
 .min-price-button {
   left: 13px;
 }
@@ -1425,6 +1435,9 @@ a {
 .fat-list-radio:disabled:checked + .fat-list-button::before {
   background-color: rgba(255, 255, 255, 0.4);
 }
+.fat-list-radio:disabled + .fat-list-button {
+  color: rgba(255, 255, 255, 0.4);
+}
 .filler {
   width: 702px;
 }
@@ -1471,6 +1484,9 @@ a {
 }
 .filler-list-checkbox:disabled:checked + .filler-list-button::before {
   background-image: url(../img/checkbox-on-disabled.svg);
+}
+.filler-list-checkbox:disabled + .filler-list-button {
+  color: rgba(255, 255, 255, 0.4);
 }
 .filters-button {
   align-self: flex-start;
@@ -1549,7 +1565,7 @@ a {
   }
 }
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-  .for-ie{
+  .for-ie {
     margin-right: 27px;
     margin-left: 27px;
   }
