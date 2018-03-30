@@ -199,3 +199,104 @@ if (modalForm) {
     }
   })
 }
+/*Ice-Cream Overlay*/
+
+var iceCreamList = document.querySelectorAll('.ice-cream-item');
+var iceCreamListFocus = function() {
+  this.classList.add('focused');
+  var iceCreamButton = this.querySelector('.item-button');
+  iceCreamButton.classList.add('active');
+}
+var iceCreamListOutFocus = function() {
+  this.classList.remove('focused');
+  var iceCreamButton = this.querySelector('.item-button');
+  iceCreamButton.classList.remove('active');
+}
+
+for(var i=0; i < iceCreamList.length; i++) {
+  iceCreamList[i].addEventListener("focus", iceCreamListFocus, true);
+  iceCreamList[i].addEventListener("blur", iceCreamListOutFocus, true);
+}
+/*Range*/
+var priceRange = document.querySelector('.price-range');
+if(priceRange) {
+  var thumbElemLeft = priceRange.children[0];
+  var thumbElemRight = priceRange.children[1];
+  function getCoords(elem) {
+    var box = elem.getBoundingClientRect();
+    return {
+      top: box.top + pageYOffset,
+      left: box.left + pageXOffset
+    };
+  }
+  function getCoordsRight(elem) {
+    var box = elem.getBoundingClientRect();
+    return {
+      top: box.top + pageYOffset,
+      right: box.right + pageXOffset
+    };
+  }
+
+  /*Range-left*/
+  thumbElemLeft.onmousedown = function(e) {
+    var thumbCoords = getCoords(thumbElemLeft);
+    var thumbCoordsRight = getCoords(thumbElemRight);
+    var sliderCoords = getCoords(priceRange);
+    var shiftX = e.pageX - thumbCoords.left;
+
+    document.onmousemove = function(e) {
+      var newLeft = e.pageX - shiftX - sliderCoords.left;
+      if (newLeft < 0) {
+        newLeft = 0;
+      }
+
+      var rightEdge = thumbCoordsRight.left - sliderCoords.left-thumbElemRight.offsetWidth;
+      if (newLeft > rightEdge) {
+        newLeft = rightEdge;
+      }
+
+      thumbElemLeft.style.left = newLeft + 'px';
+    }
+
+    document.onmouseup = function() {
+      document.onmousemove = document.onmouseup = null;
+    };
+
+    return false;
+  };
+
+  thumbElemLeft.ondragstart = function() {
+    return false;
+  };
+
+  /*Range-right */
+  thumbElemRight.onmousedown = function(e) {
+    var thumbCoords = getCoordsRight(thumbElemLeft);
+    var thumbCoordsRight = getCoordsRight(thumbElemRight);
+    var sliderCoords = getCoordsRight(priceRange);
+    var shiftX = thumbCoordsRight.right - e.pageX;
+    document.onmousemove = function(e) {
+      var newRight = sliderCoords.right - e.pageX - shiftX;
+      if (newRight < 0) {
+        newRight = 0;
+      }
+
+      var leftEdge = sliderCoords.right - thumbCoords.right-thumbElemLeft.offsetWidth;
+      if (newRight > leftEdge) {
+        newRight = leftEdge;
+      }
+
+      thumbElemRight.style.right = newRight + 'px';
+    }
+
+    document.onmouseup = function() {
+      document.onmousemove = document.onmouseup = null;
+    };
+
+  return false;
+  };
+
+  thumbElemRight.ondragstart = function() {
+    return false;
+  };
+}

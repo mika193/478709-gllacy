@@ -699,7 +699,7 @@ a {
   box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
 }
 .ice-cream-item:hover::after,
-.ice-cream-item.focus::after {
+.ice-cream-item.focused::after {
   z-index: 1;
   display: block;
 }
@@ -768,7 +768,8 @@ a {
   box-shadow: 0px 1px 2px 0px #ac1000;
 }
 .ice-cream-item:hover .ice-cream-wrapper > .item-button,
-.item-button:focus {
+.item-button:focus,
+.item-button.active {
   z-index: 2;
   opacity: 1;
 }
