@@ -1353,13 +1353,14 @@ a {
 .price-range {
   position: relative;
   width: 176px;
-  padding-left: 25px;
+  /*padding-left: 25px;*/
   border-bottom: 4px solid rgba(248, 247, 244, 0.5);
 }
-.price-range::before {
-  content: "";
+.price-range .price-range-fat {
   position: absolute;
-  width: 98px;
+  left: 23px;
+  z-index: 1;
+  width: 96px;
   height: 4px;
   background-color: #f8f7f1
 }
@@ -1367,6 +1368,7 @@ a {
 .max-price-button {
   position: absolute;
   top: -9px;
+  z-index: 2;
   width: 20px;
   height: 23px;
   background-color: transparent;
@@ -1384,7 +1386,7 @@ a {
   left: 13px;
 }
 .max-price-button {
-  right: 43px;
+  left: 100px;
 }
 .fat {
   width: 415px;

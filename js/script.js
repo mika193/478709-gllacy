@@ -217,11 +217,23 @@ for(var i=0; i < iceCreamList.length; i++) {
   iceCreamList[i].addEventListener("focus", iceCreamListFocus, true);
   iceCreamList[i].addEventListener("blur", iceCreamListOutFocus, true);
 }
+
 /*Range*/
-var priceRange = document.querySelector('.price-range');
-if(priceRange) {
-  var thumbElemLeft = priceRange.children[0];
-  var thumbElemRight = priceRange.children[1];
+var price = document.querySelector('.price');
+if(price) {
+  var priceRange = document.querySelector('.price-range');
+  var thumbElemLeft = document.querySelector('.min-price-button');
+  var thumbElemRight = document.querySelector('.max-price-button');
+  var priceFatLine = document.querySelector('.price-range-fat');
+  var priceFatLineWidth = priceFatLine.offsetWidth;
+  var rangeCoords = getCoords(priceRange);
+  var minPrice = document.getElementById('min-price');
+  var maxPrice = document.getElementById('max-price');
+
+  function roundTo50(num) {
+    return Math.round(num/50)*50;
+  }
+
   function getCoords(elem) {
     var box = elem.getBoundingClientRect();
     return {
@@ -229,6 +241,7 @@ if(priceRange) {
       left: box.left + pageXOffset
     };
   }
+
   function getCoordsRight(elem) {
     var box = elem.getBoundingClientRect();
     return {
@@ -241,21 +254,28 @@ if(priceRange) {
   thumbElemLeft.onmousedown = function(e) {
     var thumbCoords = getCoords(thumbElemLeft);
     var thumbCoordsRight = getCoords(thumbElemRight);
-    var sliderCoords = getCoords(priceRange);
     var shiftX = e.pageX - thumbCoords.left;
 
     document.onmousemove = function(e) {
-      var newLeft = e.pageX - shiftX - sliderCoords.left;
+      var newLeft = e.pageX - shiftX - rangeCoords.left;
       if (newLeft < 0) {
         newLeft = 0;
       }
 
-      var rightEdge = thumbCoordsRight.left - sliderCoords.left-thumbElemRight.offsetWidth;
+      var rightEdge = thumbCoordsRight.left - rangeCoords.left-thumbElemRight.offsetWidth;
       if (newLeft > rightEdge) {
         newLeft = rightEdge;
       }
 
       thumbElemLeft.style.left = newLeft + 'px';
+
+      var leftCorner = thumbElemLeft.offsetLeft;
+      priceFatLineWidth = thumbElemRight.offsetLeft-thumbElemLeft.offsetLeft;
+      priceFatLine.style.left = leftCorner + 'px';
+      priceFatLine.style.width = priceFatLineWidth + 'px';
+
+      var minValue = leftCorner*5;
+      minPrice.value = roundTo50(minValue);
     }
 
     document.onmouseup = function() {
@@ -272,28 +292,35 @@ if(priceRange) {
   /*Range-right */
   thumbElemRight.onmousedown = function(e) {
     var thumbCoords = getCoordsRight(thumbElemLeft);
-    var thumbCoordsRight = getCoordsRight(thumbElemRight);
-    var sliderCoords = getCoordsRight(priceRange);
-    var shiftX = thumbCoordsRight.right - e.pageX;
+    var thumbCoordsRight = getCoords(thumbElemRight);
+    var rangeCoordsRight = getCoordsRight(priceRange);
+    var shiftX = e.pageX - thumbCoordsRight.left;
+    var leftLimt = thumbCoords.right - rangeCoords.left;
+
     document.onmousemove = function(e) {
-      var newRight = sliderCoords.right - e.pageX - shiftX;
-      if (newRight < 0) {
-        newRight = 0;
+      var leftCord = e.pageX - shiftX - rangeCoords.left;
+      if (leftCord < leftLimt) {
+        leftCord = leftLimt;
       }
 
-      var leftEdge = sliderCoords.right - thumbCoords.right-thumbElemLeft.offsetWidth;
-      if (newRight > leftEdge) {
-        newRight = leftEdge;
+      var rightCord = rangeCoordsRight.right - rangeCoords.left-thumbElemRight.offsetWidth;
+      if (leftCord > rightCord) {
+        leftCord = rightCord;
       }
 
-      thumbElemRight.style.right = newRight + 'px';
+      thumbElemRight.style.left = leftCord + 'px';
+      priceFatLineWidth = thumbElemRight.offsetLeft-thumbElemLeft.offsetLeft;
+      priceFatLine.style.width = priceFatLineWidth + 'px';
+
+      var maxValue = leftCord*5;
+      maxPrice.value = roundTo50(maxValue);
     }
 
     document.onmouseup = function() {
       document.onmousemove = document.onmouseup = null;
     };
 
-  return false;
+    return false;
   };
 
   thumbElemRight.ondragstart = function() {
