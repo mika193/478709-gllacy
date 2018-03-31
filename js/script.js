@@ -161,6 +161,34 @@ if (thirdButton) {
   }
 }
 
+/* Map */
+var mapBlock = document.getElementById('map');
+if(mapBlock) {
+  ymaps.ready(init);
+  var myMap;
+
+  function init(){
+    myMap = new ymaps.Map("map", {
+      center: [59.93949241, 30.32830090],
+      zoom: 16
+    });
+
+    var myPlacemark = new ymaps.Placemark([59.93863106, 30.32305450], null, {
+      iconLayout: 'default#image',
+      iconImageHref: 'img/pin.svg',
+      iconImageSize: [80, 140],
+      iconImageOffset: [-40, -140],
+      iconShadow: true,
+      iconShadowLayout: 'default#image',
+      iconShadowImageHref: 'img/pin-shadow.png',
+      iconShadowImageSize: [182, 110],
+      iconShadowImageOffset: [0, -110]
+    });
+
+    myMap.geoObjects.add(myPlacemark);
+  }
+}
+
 /*Modal-Feedback*/
 var feedback = document.querySelector('.feedback-button');
 var feedbackModal = document.querySelector('.modal-feedback');

@@ -923,13 +923,6 @@ a {
   width: 100%;
   overflow: hidden;
 }
-.contacts-container iframe {
-  position: relative;
-  z-index: 2;
-  width: 100%;
-  height: 100%;
-  border: none;
-}
 .contacts-wrapper {
   position: relative;
   z-index: 3;
@@ -1609,9 +1602,6 @@ a {
   }
   .breadcrumbs {
     margin-top: 20px;
-  }
-  .contacts-container iframe {
-    border: 0;
   }
 }
 @supports (-ms-ime-align:auto) {
