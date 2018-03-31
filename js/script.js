@@ -250,6 +250,69 @@ if(price) {
     };
   }
 
+  function minValue(position) {
+    var minPriceValue = position*5;
+    minPrice.value = roundTo50(minPriceValue);
+  }
+
+  function maxValue(position) {
+    var maxValue = position*5;
+    maxPrice.value = roundTo50(maxValue);
+  }
+
+  function priceFatLinePosition (position) {
+    priceFatLineWidth = thumbElemRight.offsetLeft-thumbElemLeft.offsetLeft;
+    priceFatLine.style.left = position + 'px';
+    priceFatLine.style.width = priceFatLineWidth + 'px';
+  }
+
+  /*Range-key-press*/
+  thumbElemLeft.onkeypress = function(event) {
+    var target = event.keyCode;
+    var leftPosition = thumbElemLeft.offsetLeft;
+    var rightPosition = thumbElemRight.offsetLeft;
+
+    if(target =='37') {
+      leftPosition = leftPosition - 7;
+      if (leftPosition < 0) {leftPosition = 0}
+    }
+
+    if(target =='39') {
+      leftPosition = leftPosition + 7;
+      if (leftPosition >= (rightPosition-thumbElemLeft.offsetWidth-2)) {
+        leftPosition = rightPosition-thumbElemLeft.offsetWidth-2;
+      }
+    }
+
+    thumbElemLeft.style.left = leftPosition + 'px';
+    minValue(leftPosition);
+    priceFatLinePosition(leftPosition);
+  }
+
+  thumbElemRight.onkeypress = function(event) {
+    var targetRight = event.keyCode;
+    var leftPosition = thumbElemLeft.offsetLeft;
+    var rightPosition = thumbElemRight.offsetLeft;
+
+    if(targetRight =='37') {
+      rightPosition = rightPosition - 7;
+      if (rightPosition < (leftPosition+thumbElemRight.offsetWidth+2)) {
+        rightPosition = leftPosition+thumbElemRight.offsetWidth+2
+      }
+    }
+
+    if(targetRight =='39') {
+      rightPosition = rightPosition + 7;
+      if (rightPosition >= (priceRange.offsetWidth-thumbElemLeft.offsetWidth)) {
+        rightPosition = priceRange.offsetWidth-thumbElemLeft.offsetWidth;
+      }
+    }
+
+    thumbElemRight.style.left = rightPosition + 'px';
+    maxValue(rightPosition);
+    priceFatLinePosition();
+  }
+
   /*Range-left*/
   thumbElemLeft.onmousedown = function(e) {
     var thumbCoords = getCoords(thumbElemLeft);
@@ -268,14 +331,9 @@ if(price) {
       }
 
       thumbElemLeft.style.left = newLeft + 'px';
-
       var leftCorner = thumbElemLeft.offsetLeft;
-      priceFatLineWidth = thumbElemRight.offsetLeft-thumbElemLeft.offsetLeft;
-      priceFatLine.style.left = leftCorner + 'px';
-      priceFatLine.style.width = priceFatLineWidth + 'px';
-
-      var minValue = leftCorner*5;
-      minPrice.value = roundTo50(minValue);
+      minValue (leftCorner);
+      priceFatLinePosition(leftCorner);
     }
 
     document.onmouseup = function() {
@@ -309,11 +367,8 @@ if(price) {
       }
 
       thumbElemRight.style.left = leftCord + 'px';
-      priceFatLineWidth = thumbElemRight.offsetLeft-thumbElemLeft.offsetLeft;
-      priceFatLine.style.width = priceFatLineWidth + 'px';
-
-      var maxValue = leftCord*5;
-      maxPrice.value = roundTo50(maxValue);
+      maxValue(leftCord);
+      priceFatLinePosition();
     }
 
     document.onmouseup = function() {
