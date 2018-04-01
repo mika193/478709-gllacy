@@ -274,9 +274,6 @@ a {
   position: relative;
   width: 32px;
   height: 32px;
-  /*background-image: url(../img/search.svg);*/
- /*background-repeat: no-repeat;
-  background-position: center;*/
   border-radius: 50%;
 }
 .search-button svg {
@@ -330,7 +327,6 @@ a {
   width: 21px;
   height: 19px;
   fill: #ffffff;
-  /*background-image: url(../img/enter.svg);*/
 }
 .enter-button:hover svg,
 .enter-button:focus svg {
@@ -352,7 +348,6 @@ a {
   box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
   opacity: 0;
   transform: scale(0.1);
-
 }
 .enter-button:hover + .enter-form,
 .enter-button:focus + .enter-form,
@@ -415,18 +410,17 @@ a {
   position: relative;
   padding: 7px 34px 7px 44px;
 }
-.header-cart .cart-link::before {
-  content: "";
+.header-cart svg {
   position: absolute;
   top: 7px;
   left: 15px;
   width: 21px;
   height: 20px;
-  background-image: url(../img/cart.svg);
+  fill: #ffffff;
 }
-.header-cart .cart-link:hover::before,
-.header-cart .cart-link:focus::before {
-  background-image: url(../img/cart-hover.svg);
+.cart-link:hover svg,
+.cart-link:focus svg {
+  fill: #000000;
 }
 .user-navigation .full-cart {
   padding-right: 17px;
@@ -436,6 +430,12 @@ a {
 .header-cart .full-cart::before,
 .header-cart .full-cart:hover::before,
 .header-cart .full-cart:focus::before {
+  content: "";
+  position: absolute;
+  top: 7px;
+  left: 15px;
+  width: 21px;
+  height: 20px;
   background-image: url(../img/full-cart.svg);
 }
 .cart-content {
@@ -1002,60 +1002,32 @@ a {
   margin-bottom: 5px;
 }
 .social .social-link {
+  position: relative;
   display: block;
   width: 38px;
   height: 38px;
   border: 3px solid rgba(255, 255, 255, 0.5);
   border-radius: 50%;
+  overflow: hidden;
+}
+.social-link svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  fill: rgba(255, 255, 255, 0.8);
 }
 .social .social-link:hover,
 .social .social-link:active,
 .social .social-link:focus {
   border: 3px solid rgba(255, 255, 255, 0.7);
 }
-.twitter {
-  background-image: url(../img/twitter.svg);
-  background-repeat: no-repeat;
-  background-position: center;
- }
- .twitter:hover {
-  background-image: url(../img/twitter-hover.svg);
- }
- .twitter:active {
-  background-image: url(../img/twitter-active.svg);
- }
-.instagramm {
-  background-image: url(../img/instagramm.svg);
-  background-repeat: no-repeat;
-  background-position: center;
+.social-link:hover svg,
+.social-link:focus svg {
+  fill: #ffffff;
 }
-.instagramm:hover {
-  background-image: url(../img/instagramm-hover.svg);
-}
-.instagramm:active {
-  background-image: url(../img/instagramm-active.svg);
-}
-.facebook {
-  background-image: url(../img/facebook.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-}
-.facebook:hover {
-  background-image: url(../img/facebook-hover.svg);
-}
-.facebook:active {
-  background-image: url(../img/facebook-active.svg);
-}
-.vk {
-  background-image: url(../img/vkontakte.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-}
-.vk:hover {
-  background-image: url(../img/vkontakte-hover.svg);
-}
-.vk:active {
-  background-image: url(../img/vkontakte-active.svg);
+.social-link:active svg {
+  fill: #e9e9e9;
 }
 .for-constractors-menu {
   position: relative;
@@ -1354,7 +1326,6 @@ a {
 .price-range {
   position: relative;
   width: 176px;
-  /*padding-left: 25px;*/
   border-bottom: 4px solid rgba(248, 247, 244, 0.5);
 }
 .price-range .price-range-fat {
@@ -1387,7 +1358,7 @@ a {
   left: 13px;
 }
 .max-price-button {
-  left: 100px;
+  left: 113px;
 }
 .fat {
   width: 415px;
@@ -1397,8 +1368,8 @@ a {
   flex-wrap: wrap;
   margin: 0;
   padding: 8px 2px 2px 12px;
-  background-color: rgba(255, 255, 255, 0.2);
   list-style: none;
+  background-color: rgba(255, 255, 255, 0.2);
   border-radius: 17px;
 }
 .fat-list li {
@@ -1470,9 +1441,10 @@ a {
   background-image: url(../img/checkbox-off.svg);
   background-repeat: no-repeat;
   background-size: contain;
+  opacity: 0.8;
 }
 .filler-list-button:hover::before {
-  background-image: url(../img/checkbox-off-hover.svg);
+  opacity: 1;
 }
 .filler-list-checkbox:focus + .filler-list-button::before {
   outline: rgba(255, 255, 255, 0.5) dashed 1px;
@@ -1480,14 +1452,8 @@ a {
 .filler-list-checkbox:checked + .filler-list-button::before {
   background-image: url(../img/checkbox-on.svg);
 }
-.filler-list-checkbox:checked + .filler-list-button:hover::before {
-  background-image: url(../img/checkbox-on-hover.svg);
-}
 .filler-list-checkbox:disabled + .filler-list-button::before {
-  background-image: url(../img/checkbox-off-disabled.svg);
-}
-.filler-list-checkbox:disabled:checked + .filler-list-button::before {
-  background-image: url(../img/checkbox-on-disabled.svg);
+  opacity: 0.4;
 }
 .filler-list-checkbox:disabled + .filler-list-button {
   color: rgba(255, 255, 255, 0.4);
@@ -1532,9 +1498,10 @@ a {
 }
 .back {
   margin-right: 13px;
-  background: url(../img/icon-back-small.svg) no-repeat 0 50%;
+  background: url(../img/icon-forward-small.svg) no-repeat 0 50%;
   transform: rotate(180deg);
   height: 28px;
+  opacity: 0.2;
 }
 .pagination .page:active,
 .pagination .active {
