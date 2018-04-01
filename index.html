@@ -47,14 +47,23 @@
           </ul>
           <ul class="user-navigation">
             <li class="header-search">
-              <a class="user-navigation-link search-button" href="#" aria-label="Поиск"></a>
+              <a class="user-navigation-link search-button" href="#" aria-label="Поиск">
+                <svg class="search-icon" width = "18" height= "18">
+                  <use xlink:href = "map.svg#search"></use>
+                </svg>
+              </a>
               <form class="search-form" method="get" action="#">
                 <label class="visually-hidden" for="main-search">Что ищем</label>
                 <input class="entry-field" id="main-search" name="search" type="search" placeholder="Что ищем?">
               </form>
             </li>
             <li class="header-enter">
-              <a class="user-navigation-link enter-button" href="#">Вход</a>
+              <a class="user-navigation-link enter-button" href="#">
+                <svg class="search-icon" width = "21" height= "19">
+                  <use xlink:href = "map.svg#enter"></use>
+                </svg>
+                Вход
+              </a>
               <form class="enter-form" method="post" action="#">
                 <label class="visually-hidden" for="main-enter-email">Введите адрес электронной почты</label>
                 <input class="entry-field" id="main-enter-email" name="enter-email" type="email" placeholder="Электронная почта">
@@ -292,6 +301,8 @@
       </footer>
     </div>
     <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
+    <script src="js/test.js"></script>
     <script src="js/script.js"></script>
+
   </body>
 </html>

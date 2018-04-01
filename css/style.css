@@ -271,16 +271,24 @@ a {
   position: relative;
 }
 .search-button {
+  position: relative;
   width: 32px;
   height: 32px;
-  background-image: url(../img/search.svg);
-  background-repeat: no-repeat;
-  background-position: center;
+  /*background-image: url(../img/search.svg);*/
+ /*background-repeat: no-repeat;
+  background-position: center;*/
   border-radius: 50%;
 }
-.search-button:hover,
-.search-button:focus {
-  background-image: url(../img/search-hover.svg);
+.search-button svg {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  fill: #ffffff;
+}
+.search-button:hover .search-icon,
+.search-button:focus .search-icon {
+  fill: #000000;
 }
 .search-form {
   position: absolute;
@@ -315,18 +323,18 @@ a {
 .header-enter .enter-button {
   padding: 7px 16px 7px 44px;
 }
-.header-enter .enter-button::before {
-  content: "";
+.header-enter svg {
   position: absolute;
   top: 7px;
   left: 16px;
   width: 21px;
   height: 19px;
-  background-image: url(../img/enter.svg);
+  fill: #ffffff;
+  /*background-image: url(../img/enter.svg);*/
 }
-.header-enter .enter-button:hover::before,
-.header-enter .enter-button:focus::before {
-  background-image: url(../img/enter-hover.svg);
+.enter-button:hover svg,
+.enter-button:focus svg {
+  fill: #000000;
 }
 .enter-form {
   position: absolute;
