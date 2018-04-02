@@ -580,7 +580,7 @@ a {
   left: 50%;
   z-index: 1;
   flex-shrink: 1;
-  /*width: 100%;*/
+  width: 100%;
   transform: translate(-50%);
 }
 .promo-actions .button {
@@ -1610,9 +1610,6 @@ a {
   }
 }
 @media screen and (max-width: 1000px){
-  .promo-image {
-    width: 900px;
-  }
   .ice-cream-list .ice-cream-item {
     padding-top: 145px;
   }
