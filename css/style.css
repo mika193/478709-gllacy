@@ -5,7 +5,7 @@ html {
   box-sizing: inherit;
 }
 body {
-  min-width: 1200px;
+  min-width: 900px;
   margin: 0;
   padding: 0;
   font-weight: 400;
@@ -29,9 +29,11 @@ body {
   background-size: cover;
 }
 .site-container {
-  width: 1200px;
+  max-width: 1200px;
+  min-width: 900px;
   margin: 0 auto;
   padding-bottom: 4px;
+  overflow: hidden;
 }
 a {
   text-decoration: none;
@@ -115,7 +117,7 @@ a {
   position: relative;
   z-index: 3;
   margin-bottom: 39px;
-  padding: 0 27px;
+  padding: 0 2.3%;
   text-align: right;
 }
 .catalog-main-header {
@@ -129,7 +131,9 @@ a {
 .site-navigation {
   display: flex;
   flex-wrap: wrap;
-  width: 680px;
+  flex-shrink: 1;
+  max-width: 680px;
+  min-width: 400px;
   margin: 0;
   margin-top: 20px;
   margin-left: 10px;
@@ -540,7 +544,7 @@ a {
   line-height: 24px;
 }
 .content {
-  padding: 0 27px;
+  padding: 0 2.3%;
 }
 .promo-wrapper {
   position: relative;
@@ -573,13 +577,16 @@ a {
 .promo-image {
   position: absolute;
   top: -116px;
-  left: 50px;
+  left: 50%;
   z-index: 1;
+  flex-shrink: 1;
+  /*width: 100%;*/
+  transform: translate(-50%);
 }
 .promo-actions .button {
   z-index: 2;
   order: 2;
-  max-width: 850px;
+  max-width: 610px;
   padding: 10px 40px 9px;
   font-size: 32px;
   line-height: 44px;
@@ -623,7 +630,7 @@ a {
   z-index: 2;
   display: flex;
   flex-direction: column;
-  width: 560px;
+  width: 48.87%;
   padding: 15px 19px 25px;
   border-radius: 14px;
 }
@@ -677,8 +684,8 @@ a {
 }
 .ice-cream-item {
   position: relative;
-  width: 266px;
-  margin-right: 27px;
+  width: 23.2%;
+  margin-right: 2.36%;
   padding: 209px 0 39px;
 }
 .ice-cream-item:nth-child(4n) {
@@ -700,8 +707,8 @@ a {
   left: -15px;
   z-index: -1;
   display: none;
-  width: 293px;
-  height: 405px;
+  width: 110.57%;
+  height: 111.88%;
   background-color: rgba(248, 247, 244, 0.2);
   border-radius: 4px;
   box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
@@ -716,6 +723,8 @@ a {
   top: 0;
   left: 0;
   z-index: -1;
+  width: 100%;
+  height: auto;
   border-radius: 50%;
 }
 .ice-cream-item .item-price {
@@ -741,9 +750,7 @@ a {
   background-image: url(../img/icon-ruble.svg)
 }
 .ice-cream-wrapper {
-  position: relative;
-  z-index: 2;
-  width: 261px;
+  width: 98.5%;
   margin: 0;
   padding: 0;
   padding-left: 5px;
@@ -766,14 +773,15 @@ a {
 }
 .item-button {
   position: absolute;
-  bottom: -62px;
-  left: 34px;
+  bottom: 0;
+  left: 50%;
   z-index: -1;
-  max-width: 220px;
-  padding: 11px 18px;
+  width: 200px;
+  padding: 11px 16px;
   border-radius: 20px;
   opacity: 0;
   box-shadow: 0px 1px 2px 0px #ac1000;
+  transform: translate(-50%, 50%);
 }
 .ice-cream-item:hover .ice-cream-wrapper > .item-button,
 .item-button:focus,
@@ -810,10 +818,10 @@ a {
 .features-item {
   position: relative;
   margin-bottom: 22px;
-  width: 487px;
+  width: 45.9%;
 }
 .features-item:nth-child(2n) {
-  width: 472px;
+  width: 45.5%;
 }
 .features-item::before {
   content: "";
@@ -838,11 +846,10 @@ a {
 .blog-newsletter-wrapper {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
   margin-bottom: 32px;
 }
 .blog-news {
-  width: 560px;
+  width: 48.87%;
   min-height: 222px;
   padding: 23px 20px;
   color: #323232;
@@ -880,7 +887,7 @@ a {
   background-image: linear-gradient(to bottom, rgba(232,77,55,.3) 100%, transparent 100%);
 }
 .newsletter-subscription {
-  width: 560px;
+  width: 48.87%;
   padding: 5px;
   background-color: #e1d5dc;
   background-image: url(../img/post-background.svg);
@@ -900,9 +907,15 @@ a {
   line-height: 22px;
   color: #5a5a5a;
 }
+.subscription-form {
+  display: flex;
+  align-items: flex-start;
+}
 .newsletter-subscription input {
   width: 368px;
-  margin-right: 10px;
+  min-width: 229px;
+  flex-shrink: 1;
+  margin-right: 13px;
   margin-bottom: 5px;
   padding: 9px 13px;
   font-size: 16px;
@@ -924,17 +937,20 @@ a {
   top: 0;
   left: 50%;
   z-index: -1;
+  width: 100%;
   transform: translateX(-50%);
 }
 .contacts-container {
   position: relative;
   width: 100%;
   overflow: hidden;
+  overflow: hidden;
 }
 .contacts-wrapper {
   position: relative;
   z-index: 3;
-  width: 1200px;
+  max-width: 1200px;
+  min-width: 900px;
   margin: 0 auto;
 }
 .contacts-description {
@@ -986,7 +1002,7 @@ a {
 .main-footer {
   display: flex;
   justify-content: space-between;
-  padding: 12px 27px 24px;
+  padding: 12px 2.3% 24px;
 }
 .social {
   display: flex;
@@ -1008,7 +1024,6 @@ a {
   height: 38px;
   border: 3px solid rgba(255, 255, 255, 0.5);
   border-radius: 50%;
-  overflow: hidden;
 }
 .social-link svg {
   position: absolute;
@@ -1537,8 +1552,8 @@ a {
 }
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
   .for-ie {
-    margin-right: 27px;
-    margin-left: 27px;
+    margin-right: 2.3%;
+    margin-left: 2.3%;
   }
   .for-ie-special {
     margin-right: 0;
@@ -1552,8 +1567,8 @@ a {
     padding-left: 0;
   }
   .catalog-main h1 {
-    width: 1146px;
-    margin-left: 27px;
+    width: 900px;
+    margin-left: 2.3%;
   }
   .fat-list-radio:focus + .fat-list-button::before {
     outline: #0c456a solid 1px;
@@ -1592,5 +1607,37 @@ a {
   }
   .pagination {
     margin-top: 42px;
+  }
+}
+@media screen and (max-width: 1000px){
+  .promo-image {
+    width: 900px;
+  }
+  .ice-cream-list .ice-cream-item {
+    padding-top: 145px;
+  }
+  .item-button {
+    width: 193px;
+    padding: 11px 12px;
+  }
+  .features {
+    padding-right: 20px;
+  }
+  .blog-news {
+    background-position: -145px -35px;
+  }
+  .background {
+    padding-bottom: 22px;
+  }
+  .newsletter-subscription p {
+    margin-bottom: 25px;
+  }
+  .map-container {
+    background-image: url(../img/small-map.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .map-image {
+    opacity: 0;
   }
 }
