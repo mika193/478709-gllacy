@@ -760,6 +760,8 @@ a {
   padding-top: 2px;
 }
 .ice-cream-item .item-title-link {
+  position: relative;
+  z-index: 2;
   font-weight: 500;
   line-height: 22px;
   color: #ffffff;
