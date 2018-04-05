@@ -580,7 +580,6 @@ a {
   left: 50%;
   z-index: 1;
   flex-shrink: 1;
-  width: 100%;
   transform: translate(-50%);
 }
 .promo-actions .button {
@@ -616,12 +615,13 @@ a {
   background-color: #ffffff;
 }
 .free-proposal {
-  margin-bottom: 40px;
+  margin-bottom: 35px;
 }
 .free-proposal-list {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  flex-wrap: wrap;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -631,6 +631,7 @@ a {
   display: flex;
   flex-direction: column;
   width: 48.87%;
+  margin-bottom: 5px;
   padding: 15px 19px 25px;
   border-radius: 14px;
 }
@@ -847,12 +848,14 @@ a {
 }
 .blog-newsletter-wrapper {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
-  margin-bottom: 32px;
+  margin-bottom: 28px;
 }
 .blog-news {
   width: 48.87%;
   min-height: 222px;
+  margin-bottom: 5px;
   padding: 23px 20px;
   color: #323232;
   line-height: 22px;
@@ -890,6 +893,7 @@ a {
 }
 .newsletter-subscription {
   width: 48.87%;
+  margin-bottom: 5px;
   padding: 5px;
   background-color: #e1d5dc;
   background-image: url(../img/post-background.svg);
@@ -945,8 +949,6 @@ a {
 .contacts-container {
   position: relative;
   width: 100%;
-  overflow: hidden;
-  overflow: hidden;
 }
 .contacts-wrapper {
   position: relative;
@@ -961,12 +963,14 @@ a {
   right: 28px;
   z-index: 3;
   width: 302px;
+  max-height: 370px;
   padding: 27px 24px 33px 26px;
   font-size: 14px;
   line-height: 20px;
   color: #323232;
   background-color: #fefefe;
   border-radius: 13px;
+  overflow: hidden;
 }
 .contacts-description p {
   margin: 0;
@@ -1201,7 +1205,8 @@ a {
 }
 .breadcrumbs {
   display: flex;
-  width: 900px;
+  flex-wrap: wrap;
+  width: 680px;
   margin: 0;
   margin-bottom: 4px;
   padding: 0;
@@ -1210,11 +1215,11 @@ a {
 .breadcrumbs li {
   font-size: 14px;
   line-height: 16px;
+  margin-right: 20px;
 }
 .breadcrumbs-link {
   position: relative;
   z-index: 2;
-  margin-right: 20px;
   color: #ffffff;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
@@ -1595,6 +1600,9 @@ a {
   .breadcrumbs {
     margin-top: 20px;
   }
+  .contacts-container {
+    overflow: hidden;
+  }
 }
 @supports (-ms-ime-align:auto) {
   .filler-list {
@@ -1609,6 +1617,9 @@ a {
   }
   .pagination {
     margin-top: 42px;
+  }
+  .contacts-container {
+    overflow: hidden;
   }
 }
 @media screen and (max-width: 1000px){
